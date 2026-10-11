@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="UGC-Portfolio von Joanna Kleemann – UGC Creator, Influencerin und Tänzerin aus Leipzig.">
+<title>J. Kleemann UGC Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Figtree:wght@400;500;700;800&family=DM+Mono:wght@500&family=Caveat:wght@700&display=swap">
+<style>
+/* Layout: Sticker-Pop — helle Lavendel-Fläche mit Punktraster, dicke Tintenkonturen, harte Farbschatten,
+   leicht schräg gesetzte Sticker; Farbe kommt in Blöcken, nicht als Verlauf über alles. */
+:root{
+  --paper:#F5F0FF;
+  --card:#FFFFFF;
+  --ink:#1D1033;
+  --ink-soft:#4B3E66;
+  --flame:#FF5A1F;   /* ihre Haarfarbe */
+  --pink:#FF3EA5;
+  --violet:#7A3CF0;
+  --lime:#C8F23A;
+  --sky:#38C4FF;
+  --sun:#FFD23F;
+  --on-violet:#FFFFFF;
+
+  --f-display:"Shrikhand","Cooper Black",Georgia,serif;
+  --f-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-label:"DM Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-hand:"Caveat","Segoe Script","Bradley Hand",cursive;
+
+  --line:2.5px solid var(--ink);
+  --shadow:6px 6px 0 var(--ink);
+  --shadow-lg:10px 10px 0 var(--ink);
+  color-scheme:light;
+}
+
+*{box-sizing:border-box}
+html{overflow-x:clip}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--f-body);font-size:17px;line-height:1.55;
+  background-image:radial-gradient(color-mix(in srgb,var(--violet) 22%,transparent) 1.2px,transparent 1.3px);
+  background-size:22px 22px;
+  overflow-x:clip;
+}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:max(16px,4vw)}
+section{padding-block:clamp(56px,8vw,104px)}
+h1,h2,h3{margin:0;text-wrap:balance;font-weight:400}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
+
+/* ---------- Bausteine ---------- */
+.eyebrow{
+  display:inline-flex;gap:.6em;align-items:center;flex-wrap:wrap;
+  font-family:var(--f-label);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;
+  background:var(--ink);color:var(--paper);padding:.45em .9em;border-radius:999px;
+}
+.eyebrow i{width:.55em;height:.55em;border-radius:50%;background:var(--lime);display:inline-block}
+.h2{
+  font-family:var(--f-display);font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.05;
+  display:inline;
+  background:linear-gradient(transparent 62%,var(--sun) 62%,var(--sun) 92%,transparent 92%);
+  padding-inline:.12em;
+}
+.sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(28px,4vw,48px)}
+.kicker{font-family:var(--f-label);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+
+.sticker{
+  border:var(--line);border-radius:18px;box-shadow:var(--shadow);
+  transition:transform .25s cubic-bezier(.3,1.6,.6,1),box-shadow .25s;
+}
+.sticker:hover{transform:rotate(0deg) translate(-3px,-3px)!important;box-shadow:9px 9px 0 var(--ink)}
+
+.pill{
+  display:inline-flex;align-items:center;gap:.5em;
+  border:var(--line);border-radius:999px;padding:.35em .9em .35em .45em;
+  font-weight:800;background:var(--card);font-variant-numeric:tabular-nums;
+}
+.pill svg{width:26px;height:26px;flex:none}
+
+/* Bildrahmen */
+.slot{position:relative;overflow:hidden;background:var(--violet)}
+.slot img,.slot video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+
+/* ---------- Hero ---------- */
+.hero{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,72px);align-items:center;
+  padding-block:clamp(40px,7vw,88px) clamp(48px,6vw,72px);
+}
+.hero-copy{display:flex;flex-direction:column;gap:22px;min-width:0;position:relative;z-index:3;container-type:inline-size}
+.name{
+  font-family:var(--f-display);line-height:.92;
+  font-size:clamp(2.8rem,7vw,6rem);
+  font-size:clamp(2.8rem,15.5cqi,7rem);
+  display:flex;flex-direction:column;
+}
+.name .n1{color:var(--flame);text-shadow:5px 5px 0 var(--ink)}
+.name .n2{color:var(--violet);text-shadow:5px 5px 0 var(--pink);margin-left:.35em}
+.loc{display:inline-flex;align-items:center;gap:.4em;font-weight:700;color:var(--ink-soft)}
+.loc svg{width:18px;height:18px}
+
+.stats{display:flex;flex-wrap:wrap;gap:14px}
+.stat{padding:14px 18px;display:flex;flex-direction:column;gap:2px;flex:1 1 auto;min-width:min(100%,150px)}
+.stat b{font-family:var(--f-display);font-weight:400;font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.stat small{font-size:.86rem;font-weight:500;line-height:1.3}
+.stat:nth-child(1){background:var(--pink);transform:rotate(-2deg)}
+.stat:nth-child(2){background:var(--sky);transform:rotate(1.5deg)}
+.stat:nth-child(3){background:var(--sun);transform:rotate(-1deg)}
+
+.contact-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.mailbox{
+  display:flex;align-items:center;gap:0;border:var(--line);border-radius:999px;background:var(--card);
+  box-shadow:4px 4px 0 var(--ink);overflow:hidden;max-width:100%;
+}
+.mailbox .mail{padding:.55em 1em;font-weight:700;user-select:all;min-width:0;overflow-wrap:anywhere}
+.btn{
+  font:inherit;font-weight:800;cursor:pointer;border:0;border-left:var(--line);
+  background:var(--flame);color:var(--ink);padding:.55em 1.1em;white-space:nowrap;
+}
+.btn:hover{background:var(--lime)}
+
+.hero-visual{position:relative;z-index:1;justify-self:center;width:min(100%,400px)}
+.arch{
+  position:relative;aspect-ratio:4/5;width:100%;
+  border:var(--line);border-radius:999px 999px 36px 36px;
+}
+.arch.back1{position:absolute;inset:0;background:var(--sun);transform:translate(22px,14px) rotate(5deg)}
+.arch.back2{position:absolute;inset:0;background:var(--pink);transform:translate(-14px,22px) rotate(-4deg)}
+.arch.photo{z-index:1;box-shadow:none}
+.badge{
+  position:absolute;z-index:2;left:-26px;bottom:-30px;width:132px;height:132px;
+  background:var(--lime);border:var(--line);border-radius:50%;box-shadow:var(--shadow);
+  display:grid;place-items:center;
+}
+.badge svg.ring{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);animation:spin 16s linear infinite}
+.badge text{font-family:var(--f-label);font-size:10.4px;letter-spacing:.14em;fill:var(--ink);text-transform:uppercase}
+.badge .core{font-family:var(--f-display);font-size:1.5rem;color:var(--violet);line-height:1}
+.spark{position:absolute;z-index:2;width:46px;height:46px;animation:pulse 2.6s ease-in-out infinite}
+.spark.s1{top:-14px;right:-6px;color:var(--violet)}
+.spark.s2{top:38%;right:-30px;width:28px;height:28px;color:var(--flame);animation-delay:.8s}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.18) rotate(20deg)}}
+
+/* ---------- Laufband ---------- */
+.bands{position:relative;height:150px;overflow:hidden;margin-block:8px}
+.band{
+  position:absolute;left:-5%;width:110%;top:50%;
+  border-block:var(--line);padding-block:12px;overflow:hidden;white-space:nowrap;
+}
+.band.b1{background:var(--pink);transform:translateY(-50%) rotate(-3deg);z-index:1}
+.band.b2{background:var(--lime);transform:translateY(-50%) rotate(2.5deg)}
+.track{display:inline-flex;gap:0;animation:marquee 26s linear infinite}
+.band.b2 .track{animation-direction:reverse;animation-duration:32s}
+.track span{
+  font-family:var(--f-display);font-size:clamp(1.3rem,2.6vw,1.9rem);padding-inline:.6em;
+  display:inline-flex;align-items:center;gap:1.1em;
+}
+.track span::after{content:"✦";font-family:var(--f-body);font-size:.8em}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ---------- Wieso ich ---------- */
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.5vw,30px);align-items:start}
+.why{padding:24px 24px 26px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.why:nth-child(1){background:var(--pink);transform:rotate(-1.2deg)}
+.why:nth-child(2){background:var(--sky);transform:rotate(.8deg);margin-top:28px}
+.why:nth-child(3){background:var(--sun);transform:rotate(-.6deg)}
+.why h3{font-family:var(--f-display);font-size:1.6rem;line-height:1.1}
+.why .ico{
+  width:52px;height:52px;border-radius:50%;border:var(--line);background:var(--card);
+  display:grid;place-items:center;
+}
+.why .ico svg{width:26px;height:26px}
+.ticks{display:flex;flex-direction:column;gap:10px}
+.ticks li{display:grid;grid-template-columns:20px 1fr;gap:10px;font-weight:500;line-height:1.4}
+.ticks li::before{
+  content:"";width:14px;height:14px;margin-top:.3em;border:2px solid var(--ink);border-radius:4px;
+  background:var(--card);transform:rotate(45deg);
+}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips li{
+  background:var(--card);border:2px solid var(--ink);border-radius:999px;padding:.32em .85em;
+  font-weight:700;font-size:.92rem;transition:background .2s,transform .2s;cursor:default;
+}
+.chips li:hover{background:var(--lime);transform:translateY(-2px) rotate(-2deg)}
+
+/* ---------- Videos ---------- */
+.videos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,4vw,56px);justify-items:center}
+.vid{display:flex;flex-direction:column;align-items:center;gap:22px;width:100%;max-width:250px}
+.phone{
+  position:relative;width:100%;aspect-ratio:9/18.5;max-width:100%;
+  border:var(--line);border-radius:38px;padding:9px;box-shadow:var(--shadow-lg);
+  transition:transform .4s cubic-bezier(.3,1.5,.6,1);
+}
+.vid:nth-child(1) .phone{background:linear-gradient(160deg,var(--pink),var(--flame));transform:rotate(-4deg)}
+.vid:nth-child(2) .phone{background:linear-gradient(160deg,var(--sky),var(--violet));transform:translateY(-18px)}
+.vid:nth-child(3) .phone{background:linear-gradient(160deg,var(--lime),var(--sun));transform:rotate(4deg)}
+.vid:hover .phone{transform:rotate(0) translateY(-10px) scale(1.03)}
+.phone .slot{height:100%;border-radius:30px;border:2px solid var(--ink)}
+.phone::before{
+  content:"";position:absolute;z-index:2;top:17px;left:50%;transform:translateX(-50%);
+  width:34%;height:16px;border-radius:999px;background:var(--ink);
+}
+.play{
+  position:absolute;z-index:2;right:-14px;bottom:24px;width:54px;height:54px;border-radius:50%;
+  background:var(--card);border:var(--line);display:grid;place-items:center;box-shadow:3px 3px 0 var(--ink);
+  cursor:pointer;padding:0;transition:transform .2s,background .2s;
+}
+.play:hover{background:var(--lime);transform:scale(1.08)}
+.play svg{width:20px;height:20px}
+.play .i-play{margin-left:3px}
+.play .i-pause,.phone.playing .play .i-play{display:none}
+.phone.playing .play .i-pause{display:block}
+.phone{cursor:pointer}
+.phone.playing{transform:rotate(0) translateY(-10px) scale(1.03)!important}
+.vid-label{padding:.45em 1em;background:var(--card);font-weight:800;border-radius:999px}
+.vid:nth-child(1) .vid-label{transform:rotate(2deg)}
+.vid:nth-child(3) .vid-label{transform:rotate(-2deg);background:var(--sun)}
+
+/* ---------- Marken ---------- */
+.brands{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;
+  background:var(--card);padding:clamp(24px,4vw,40px);border-radius:28px;
+}
+.brands .h2{font-size:clamp(1.7rem,3.6vw,2.4rem)}
+.logos{display:flex;gap:22px;flex-wrap:wrap}
+.logo{width:120px;height:120px;border-radius:50%;background:var(--card);border:var(--line);box-shadow:4px 4px 0 var(--ink)}
+.logo:nth-child(1){transform:rotate(-6deg)}
+.logo:nth-child(2){transform:rotate(5deg)}
+
+/* ---------- Analytics ---------- */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:26px}
+.kpi{padding:18px 18px 16px;display:flex;flex-direction:column;gap:4px;background:var(--card)}
+.kpi b{font-family:var(--f-display);font-weight:400;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1;font-variant-numeric:tabular-nums}
+.kpi small{font-family:var(--f-label);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.kpi:nth-child(1) b{color:var(--pink)}
+.kpi:nth-child(2) b{color:var(--violet)}
+.kpi:nth-child(3) b{color:var(--flame)}
+.kpi:nth-child(4) b{color:#0E8FC4}
+.shots{
+  display:grid;grid-auto-flow:column;grid-auto-columns:clamp(150px,22vw,200px);gap:18px;
+  overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 6px 22px;
+  scrollbar-color:var(--violet) transparent;
+}
+.shot img{object-position:center bottom}
+.shot{scroll-snap-align:start;aspect-ratio:3/4;border:var(--line);border-radius:20px;box-shadow:5px 5px 0 var(--ink)}
+.shot:nth-child(odd){transform:rotate(-1.5deg)}
+.shot:nth-child(even){transform:rotate(1.5deg)}
+.hint{font-family:var(--f-label);font-size:.75rem;color:var(--ink-soft);letter-spacing:.06em}
+
+/* ---------- Specials ---------- */
+.specials{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center}
+.special-card{background:var(--lime);padding:clamp(24px,3.5vw,38px);display:flex;flex-direction:column;gap:18px;transform:rotate(-1deg);min-width:0}
+.special-card .big{font-family:var(--f-display);font-size:clamp(1.5rem,2.8vw,2rem);line-height:1.2}
+.special-card .big em{font-style:normal;color:var(--violet)}
+.checks{display:flex;flex-direction:column;gap:10px}
+.checks li{
+  display:flex;gap:12px;align-items:center;background:var(--card);border:2px solid var(--ink);
+  border-radius:14px;padding:.6em .9em;font-weight:700;
+}
+.checks svg{width:24px;height:24px;flex:none}
+.collage{position:relative;width:min(100%,440px);justify-self:center;padding-bottom:70px}
+.collage .main{aspect-ratio:5/6;border:var(--line);border-radius:36px 36px 36px 120px;box-shadow:var(--shadow-lg)}
+.collage .dot{
+  position:absolute;width:31%;aspect-ratio:1;border-radius:50%;border:var(--line);box-shadow:4px 4px 0 var(--ink);
+}
+.collage .d1{left:-6%;bottom:6px;outline:6px solid var(--pink);outline-offset:-2px}
+.collage .d2{left:31%;bottom:-6px;outline:6px solid var(--sky);outline-offset:-2px}
+.collage .d3{right:-6%;bottom:22px;outline:6px solid var(--sun);outline-offset:-2px}
+
+/* ---------- CTA ---------- */
+.cta{
+  position:relative;background:var(--violet);color:var(--on-violet);border:var(--line);border-radius:36px;
+  box-shadow:12px 12px 0 var(--ink);padding:clamp(28px,5vw,64px);
+  display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(28px,4vw,56px);align-items:center;overflow:hidden;
+}
+.cta::before,.cta::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.cta::before{width:340px;height:340px;right:-120px;top:-140px;background:var(--pink);opacity:.9}
+.cta::after{width:200px;height:200px;left:-80px;bottom:-110px;background:var(--flame)}
+.cta > *{position:relative;z-index:1;min-width:0}
+.cta-copy{display:flex;flex-direction:column;gap:22px}
+.cta h2{font-family:var(--f-display);font-size:clamp(2.1rem,5.2vw,3.8rem);line-height:1.05}
+.cta h2 span{color:var(--sun);text-shadow:4px 4px 0 var(--ink)}
+.cta .mailbox{color:var(--ink)}
+.cta .btn{background:var(--sun)}
+.cta .btn:hover{background:var(--lime)}
+.cta .pill{color:var(--ink)}
+.express{
+  align-self:flex-start;background:var(--sun);color:var(--ink);padding:.5em 1em;font-weight:800;
+  transform:rotate(-3deg);border-radius:14px;
+}
+.cta-side{display:flex;flex-direction:column;align-items:center;gap:12px}
+.cta-photo{width:min(100%,260px);aspect-ratio:1;border-radius:50%;border:var(--line);box-shadow:var(--shadow)}
+.sig{font-family:var(--f-hand);font-size:2.6rem;line-height:1;color:var(--sun);transform:rotate(-6deg)}
+.maillink{color:inherit;font-weight:700;text-underline-offset:3px}
+
+footer{padding-block:36px 48px;text-align:center;font-family:var(--f-label);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* Toast + Konfetti */
+.toast{
+  position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:50;
+  transform:translate(-50%,140%);transition:transform .35s cubic-bezier(.3,1.5,.6,1);
+  background:var(--ink);color:var(--paper);border-radius:999px;padding:.7em 1.3em;font-weight:700;
+  visibility:hidden;
+}
+.toast.show{transform:translate(-50%,0);visibility:visible}
+#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40}
+
+/* ---------- Responsive ---------- */
+@media (max-width:880px){
+  .hero{grid-template-columns:1fr}
+  .hero-visual{width:min(82%,360px);margin-bottom:24px}
+  .why-grid{grid-template-columns:1fr}
+  .why:nth-child(2){margin-top:0}
+  .specials{grid-template-columns:1fr}
+  .cta{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .videos{grid-template-columns:1fr;gap:44px}
+  .vid:nth-child(2) .phone{transform:none}
+  .vid{max-width:230px}
+  .badge{width:108px;height:108px;left:-12px;bottom:-24px}
+  .badge text{font-size:8.6px}
+  .logo{width:96px;height:96px}
+  .bands{height:120px}
+  .mailbox{flex-direction:column;align-items:stretch;border-radius:18px;width:100%}
+  .mailbox .mail{text-align:center;overflow-wrap:normal}
+  .btn{border-left:0;border-top:var(--line)}
+}
+@media (prefers-reduced-motion:reduce){
+  .track,.badge svg.ring,.spark{animation:none}
+  .sticker,.phone,.chips li,.toast{transition:none}
+}
+</style>
+</head><body>
+
+<header class="hero wrap">
+  <div class="hero-copy">
+    <p class="eyebrow"><i></i>UGC Creator · Influencerin · selbstständige Tänzerin</p>
+    <h1 class="name"><span class="n1">Joanna</span><span class="n2">Kleemann</span></h1>
+    <p class="loc">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.6"/></svg>
+      Leipzig, Germany
+    </p>
+
+    <ul class="stats">
+      <li class="stat sticker"><b>6,0 Mio.</b><small>Views · Instagram Top View</small></li>
+      <li class="stat sticker"><b>1,2 Mio.</b><small>Views · TikTok Top View</small></li>
+      <li class="stat sticker"><b>Storytelling</b><small>Sehr gute Storytellerin</small></li>
+    </ul>
+
+    <div class="contact-row">
+      <div class="mailbox">
+        <span class="mail">contact@joannakleemann.de</span>
+        <button class="btn" type="button" id="copy-hero" data-copy="contact@joannakleemann.de">E-Mail kopieren</button>
+      </div>
+      <span class="pill">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="9" fill="#FF3EA5" stroke="#1D1033" stroke-width="2"/><rect x="8" y="8" width="16" height="16" rx="5" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="16" cy="16" r="3.8" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="21.6" cy="10.4" r="1.4" fill="#fff"/></svg>
+        5,9k
+      </span>
+      <span class="pill">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="9" fill="#1D1033"/><path d="M18 7v12.2a3.8 3.8 0 1 1-3.8-3.8" fill="none" stroke="#38C4FF" stroke-width="2.6" stroke-linecap="round" transform="translate(-1 1)"/><path d="M18 7v12.2a3.8 3.8 0 1 1-3.8-3.8" fill="none" stroke="#FF3EA5" stroke-width="2.6" stroke-linecap="round" transform="translate(1 -1)"/><path d="M18 7v12.2a3.8 3.8 0 1 1-3.8-3.8M18 7c.4 2.8 2.3 4.6 5 4.8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
+        5,2k
+      </span>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="arch back1" aria-hidden="true"></div>
+    <div class="arch back2" aria-hidden="true"></div>
+    <div class="arch photo slot"><img src="img/hero.jpg" alt="Joanna Kleemann lächelt in die Kamera"></div>
+    <svg class="spark s1" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 0c1.5 11 7.5 17 20 20-12.5 3-18.5 9-20 20-1.5-11-7.5-17-20-20C12.5 17 18.5 11 20 0z" fill="currentColor" stroke="#1D1033" stroke-width="2"/></svg>
+    <svg class="spark s2" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 0c1.5 11 7.5 17 20 20-12.5 3-18.5 9-20 20-1.5-11-7.5-17-20-20C12.5 17 18.5 11 20 0z" fill="currentColor" stroke="#1D1033" stroke-width="2"/></svg>
+    <div class="badge" aria-hidden="true">
+      <svg class="ring" viewBox="0 0 120 120">
+        <defs><path id="circ" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs>
+        <text><textPath href="#circ">UGC Creator ✦ Tänzerin ✦ Storytellerin ✦ </textPath></text>
+      </svg>
+      <span class="core">JK</span>
+    </div>
+  </div>
+</header>
+
+<div class="bands" aria-hidden="true">
+  <div class="band b2"><div class="track">
+    <span>Daily Content</span><span>Fitness</span><span>Dance</span><span>Vorher &amp; Nachher</span><span>POV</span><span>Storytelling</span>
+    <span>Daily Content</span><span>Fitness</span><span>Dance</span><span>Vorher &amp; Nachher</span><span>POV</span><span>Storytelling</span>
+  </div></div>
+  <div class="band b1"><div class="track">
+    <span>UGC Creator</span><span>Leipzig</span><span>Tänzerin</span><span>Sports-Maus</span><span>Express 24–72h</span>
+    <span>UGC Creator</span><span>Leipzig</span><span>Tänzerin</span><span>Sports-Maus</span><span>Express 24–72h</span>
+  </div></div>
+</div>
+
+<main>
+  <section class="wrap" id="warum">
+    <div class="sec-head">
+      <h2><span class="h2">Wieso ausgerechnet ich?</span></h2>
+    </div>
+    <div class="why-grid">
+      <article class="why sticker">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1D1033" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 9.5l4 2.5-4 2.5z" fill="#1D1033"/></svg></div>
+        <h3>Social Media Skills</h3>
+        <ul class="ticks">
+          <li><span>Erstelle seit September 2025 <strong>jeden</strong> Tag Content</span></li>
+          <li><span>Aktive Kooperation mit HaarAnker – jede Woche ein Organic Video</span></li>
+          <li><span>Sprachen: Deutsch (Muttersprache) &amp; Englisch (fließend)</span></li>
+          <li><span>Lerne aktuell Spanisch (Niveau A1)</span></li>
+        </ul>
+      </article>
+      <article class="why sticker">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1D1033" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="4.5" r="2"/><path d="M13 7l-2 5 3 3 1 6M11 12l-4 1-2 3M14 15l4-2 2 2M12 8.5l4 1.5 3-2"/></svg></div>
+        <h3>Hintergrund</h3>
+        <ul class="ticks">
+          <li><span>Content Creator / Influencerin seit 2025</span></li>
+          <li><span>Selbstständige Tänzerin seit 2025</span></li>
+          <li><span>Bühnenerfahrung</span></li>
+        </ul>
+      </article>
+      <article class="why sticker">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1D1033" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></div>
+        <h3>Add-Ons</h3>
+        <ul class="chips">
+          <li>Raw Footage</li>
+          <li>Paid Usage (30/60/90 Tage)</li>
+          <li>Express Delivery (24–72h)</li>
+          <li>Skript &amp; Konzept-Erstellung</li>
+          <li>Untertitel &amp; On-Screen Text</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap" id="videos">
+    <div class="sec-head">
+      <h2><span class="h2">Meine bisherigen Videos</span></h2>
+    </div>
+    <div class="videos">
+      <figure class="vid" style="margin:0">
+        <div class="phone">
+          <div class="slot"><video src="video/pickel.mp4" poster="img/vid-pickel.jpg" preload="none" playsinline loop aria-label="Vorher-Nachher-Video: Mein Geheimnis gegen Pickel"></video></div>
+          <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#1D1033"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#1D1033"/></svg></button>
+        </div>
+        <figcaption class="vid-label sticker">Vorher &amp; Nachher</figcaption>
+      </figure>
+      <figure class="vid" style="margin:0">
+        <div class="phone">
+          <div class="slot"><video src="video/haut.mp4" poster="img/vid-haut.jpg" preload="none" playsinline loop aria-label="Vorher-Nachher-Video: Schluss mit gereizter Haut"></video></div>
+          <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#1D1033"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#1D1033"/></svg></button>
+        </div>
+        <figcaption class="vid-label sticker">Vorher &amp; Nachher</figcaption>
+      </figure>
+      <figure class="vid" style="margin:0">
+        <div class="phone">
+          <div class="slot"><video src="video/pov.mp4" poster="img/vid-pov.jpg" preload="none" playsinline loop aria-label="POV-Video: Saugroboter"></video></div>
+          <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#1D1033"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#1D1033"/></svg></button>
+        </div>
+        <figcaption class="vid-label sticker">POV Format</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap" id="marken" style="padding-block:0">
+    <div class="brands sticker" style="transform:rotate(-.5deg)">
+      <h2><span class="h2">Marken, mit denen ich zusammengearbeitet habe</span></h2>
+      <div class="logos">
+        <div class="logo slot"><img src="img/logo-haaranker.png" alt="Haar-Anker" loading="lazy"></div>
+        <div class="logo slot"><img src="img/logo-cabaia.png" alt="CABAIA" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="analytics">
+    <div class="sec-head">
+      <h2><span class="h2">Analytics</span></h2>
+    </div>
+    <div class="kpis">
+      <div class="kpi sticker"><b>6,0 Mio.</b><small>Instagram Top View</small></div>
+      <div class="kpi sticker"><b>1,2 Mio.</b><small>TikTok Top View</small></div>
+      <div class="kpi sticker"><b>5,9k</b><small>Follower Instagram</small></div>
+      <div class="kpi sticker"><b>5,2k</b><small>Follower TikTok</small></div>
+    </div>
+    <div class="shots" tabindex="0" aria-label="Analytics-Screenshots">
+      <div class="shot slot"><img src="img/shot-6mio.jpg" alt="Reel mit 6 Mio. Views" loading="lazy"></div>
+      <div class="shot slot"><img src="img/shot-1-8mio.jpg" alt="Reel mit 1,8 Mio. Views" loading="lazy"></div>
+      <div class="shot slot"><img src="img/shot-689k.jpg" alt="Reel mit 689 Tsd. Views" loading="lazy"></div>
+      <div class="shot slot"><img src="img/shot-162k.jpg" alt="Reel mit 162 Tsd. Views" loading="lazy"></div>
+      <div class="shot slot"><img src="img/shot-25k.jpg" alt="Reel mit 25,5 Tsd. Views" loading="lazy"></div>
+    </div>
+    <p class="hint">← wischen →</p>
+  </section>
+
+  <section class="wrap" id="specials" style="padding-top:0">
+    <div class="sec-head">
+      <h2><span class="h2">Meine Specials</span></h2>
+    </div>
+    <div class="specials">
+      <div class="special-card sticker">
+        <p class="big">Ich bin eine richtige <em>Sports-Maus</em> &amp; habe sehr viel Ahnung auf dem Gebiet.</p>
+        <p>Wenn du Bock hast, mit mir zusammenzuarbeiten, kannst du dich darauf verlassen, dass …</p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#FF3EA5" stroke="#1D1033" stroke-width="2"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1D1033" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>ich Expertise in der Fitness-Nische biete</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#38C4FF" stroke="#1D1033" stroke-width="2"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1D1033" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>ich offen für langfristige Kooperationen bin</li>
+        </ul>
+      </div>
+      <div class="collage">
+        <div class="main slot"><img src="img/special-main.jpg" alt="Joanna zeigt ihre Rückenmuskulatur" loading="lazy"></div>
+        <div class="dot d1 slot"><img src="img/pole-1.jpg" alt="Pole-Dance am Hafen bei Sonnenuntergang" loading="lazy"></div>
+        <div class="dot d2 slot"><img src="img/pole-2.jpg" alt="Pole-Dance am Wasser" loading="lazy"></div>
+        <div class="dot d3 slot"><img src="img/pole-3.jpg" alt="Pole-Dance unter blauem Himmel" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="kontakt" style="padding-top:clamp(24px,4vw,48px)">
+    <div class="cta">
+      <div class="cta-copy">
+        <h2>Lass uns zusammenarbeiten und <span>Großes</span> erschaffen!</h2>
+        <div class="contact-row">
+          <div class="mailbox">
+            <span class="mail">contact@joannakleemann.de</span>
+            <button class="btn" type="button" id="copy-cta" data-copy="contact@joannakleemann.de">E-Mail kopieren</button>
+          </div>
+        </div>
+        <div class="contact-row">
+          <span class="pill">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="9" fill="#FF3EA5" stroke="#1D1033" stroke-width="2"/><rect x="8" y="8" width="16" height="16" rx="5" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="16" cy="16" r="3.8" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="21.6" cy="10.4" r="1.4" fill="#fff"/></svg>
+            5,9k
+          </span>
+          <span class="pill">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="9" fill="#1D1033"/><path d="M18 7v12.2a3.8 3.8 0 1 1-3.8-3.8" fill="none" stroke="#38C4FF" stroke-width="2.6" stroke-linecap="round" transform="translate(-1 1)"/><path d="M18 7v12.2a3.8 3.8 0 1 1-3.8-3.8" fill="none" stroke="#FF3EA5" stroke-width="2.6" stroke-linecap="round" transform="translate(1 -1)"/><path d="M18 7v12.2a3.8 3.8 0 1 1-3.8-3.8M18 7c.4 2.8 2.3 4.6 5 4.8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
+            5,2k
+          </span>
+          <a class="maillink" href="mailto:contact@joannakleemann.de">Mail öffnen →</a>
+        </div>
+        <p class="express sticker">⚡ 24–72h Express-Lieferung möglich</p>
+      </div>
+      <div class="cta-side">
+        <div class="cta-photo slot"><img src="img/cta.jpg" alt="Joanna mit einem bunten Blumenstrauß" loading="lazy"></div>
+        <p class="sig">– Joanna</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>Joanna Kleemann · UGC Creator · Leipzig</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const css = getComputedStyle(document.documentElement);
+  const colors = ['--pink','--flame','--sun','--lime','--sky','--violet'].map(v => css.getPropertyValue(v).trim());
+
+  /* Toast */
+  const toast = document.getElementById('toast');
+  let tId;
+  function say(msg){
+    toast.textContent = msg; toast.classList.add('show');
+    clearTimeout(tId); tId = setTimeout(() => toast.classList.remove('show'), 2200);
+  }
+
+  /* Konfetti */
+  const cv = document.getElementById('confetti'), ctx = cv.getContext('2d');
+  let parts = [], raf = null;
+  function size(){ cv.width = innerWidth * devicePixelRatio; cv.height = innerHeight * devicePixelRatio; }
+  size(); addEventListener('resize', size);
+  function burst(x, y){
+    if (reduce) return;
+    for (let i = 0; i < 90; i++){
+      const a = Math.random() * Math.PI * 2, s = 4 + Math.random() * 9;
+      parts.push({x, y, vx: Math.cos(a) * s, vy: Math.sin(a) * s - 6, r: Math.random() * 6.28,
+        vr: (Math.random() - .5) * .4, w: 6 + Math.random() * 8, h: 4 + Math.random() * 6,
+        c: colors[i % colors.length], life: 0});
+    }
+    if (!raf) raf = requestAnimationFrame(tick);
+  }
+  function tick(){
+    const d = devicePixelRatio;
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    parts = parts.filter(p => p.life < 140 && p.y < innerHeight + 40);
+    for (const p of parts){
+      p.vy += .32; p.vx *= .985; p.x += p.vx; p.y += p.vy; p.r += p.vr; p.life++;
+      ctx.save(); ctx.translate(p.x * d, p.y * d); ctx.rotate(p.r);
+      ctx.fillStyle = p.c; ctx.fillRect(-p.w * d / 2, -p.h * d / 2, p.w * d, p.h * d);
+      ctx.restore();
+    }
+    raf = parts.length ? requestAnimationFrame(tick) : (ctx.clearRect(0, 0, cv.width, cv.height), null);
+  }
+
+  /* E-Mail kopieren */
+  document.querySelectorAll('[data-copy]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const text = btn.dataset.copy;
+      const r = btn.getBoundingClientRect();
+      const done = () => { say('E-Mail kopiert'); burst(r.left + r.width / 2, r.top + r.height / 2); };
+      const fallback = () => {
+        const span = btn.parentElement.querySelector('.mail');
+        const sel = getSelection(), range = document.createRange();
+        range.selectNodeContents(span); sel.removeAllRanges(); sel.addRange(range);
+        say('Markiert – jetzt kopieren');
+      };
+      try {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } catch (e) { fallback(); }
+    });
+  });
+
+
+  /* Videos in den Handy-Rahmen: Klick spielt mit Ton, andere pausieren */
+  const phones=[...document.querySelectorAll('.phone')];
+  phones.forEach(ph=>{
+    const v=ph.querySelector('video'), b=ph.querySelector('.play');
+    if(!v) return;
+    const toggle=()=>{
+      if(v.paused){
+        phones.forEach(o=>{const ov=o.querySelector('video'); if(ov&&ov!==v){ov.pause();}});
+        v.muted=false; v.play().catch(()=>{});
+      } else v.pause();
+    };
+    ph.addEventListener('click',toggle);
+    v.addEventListener('play',()=>{ph.classList.add('playing');b.setAttribute('aria-label','Video pausieren');});
+    v.addEventListener('pause',()=>{ph.classList.remove('playing');b.setAttribute('aria-label','Video abspielen');});
+  });
+})();
+</script>
+</body></html>
