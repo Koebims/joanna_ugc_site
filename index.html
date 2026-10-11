@@ -77,6 +77,10 @@ ul{margin:0;padding:0;list-style:none}
   font-weight:800;background:var(--card);font-variant-numeric:tabular-nums;
 }
 .pill svg{width:26px;height:26px;flex:none}
+a.pill{color:var(--ink);text-decoration:none;box-shadow:3px 3px 0 var(--ink);transition:transform .2s,box-shadow .2s,background .2s}
+a.pill:hover{background:var(--lime);transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
+.pill-net{font-weight:500;font-size:.85em;color:var(--ink-soft)}
+a.kpi{color:var(--ink);text-decoration:none}
 
 /* Bildrahmen */
 .slot{position:relative;overflow:hidden;background:var(--violet)}
@@ -344,7 +348,7 @@ footer{padding-block:36px 48px;text-align:center;font-family:var(--f-label);font
     </p>
 
     <ul class="stats">
-      <li class="stat sticker"><b>6,0 Mio.</b><small>Views · Instagram Top View</small></li>
+      <li class="stat sticker"><b>8,2 Mio.</b><small>Views · Instagram Top View</small></li>
       <li class="stat sticker"><b>1,2 Mio.</b><small>Views · TikTok Top View</small></li>
       <li class="stat sticker"><b>Storytelling</b><small>Sehr gute Storytellerin</small></li>
     </ul>
@@ -354,14 +358,14 @@ footer{padding-block:36px 48px;text-align:center;font-family:var(--f-label);font
         <span class="mail">contact@joannakleemann.de</span>
         <button class="btn" type="button" id="copy-hero" data-copy="contact@joannakleemann.de">E-Mail kopieren</button>
       </div>
-      <span class="pill">
+      <a class="pill" href="https://www.instagram.com/joanna_kleemann" target="_blank" rel="noopener" aria-label="Joanna auf Instagram, 5,6k Follower">
         <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="9" fill="#FF3EA5" stroke="#1D1033" stroke-width="2"/><rect x="8" y="8" width="16" height="16" rx="5" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="16" cy="16" r="3.8" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="21.6" cy="10.4" r="1.4" fill="#fff"/></svg>
-        5,9k
-      </span>
-      <span class="pill">
+        5,6k <span class="pill-net">Instagram</span>
+      </a>
+      <a class="pill" href="https://www.tiktok.com/@joanna_kleemann" target="_blank" rel="noopener" aria-label="Joanna auf TikTok, 6k Follower">
         <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="9" fill="#1D1033"/><path d="M18 7v12.2a3.8 3.8 0 1 1-3.8-3.8" fill="none" stroke="#38C4FF" stroke-width="2.6" stroke-linecap="round" transform="translate(-1 1)"/><path d="M18 7v12.2a3.8 3.8 0 1 1-3.8-3.8" fill="none" stroke="#FF3EA5" stroke-width="2.6" stroke-linecap="round" transform="translate(1 -1)"/><path d="M18 7v12.2a3.8 3.8 0 1 1-3.8-3.8M18 7c.4 2.8 2.3 4.6 5 4.8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
-        5,2k
-      </span>
+        6k <span class="pill-net">TikTok</span>
+      </a>
     </div>
   </div>
 
@@ -475,10 +479,10 @@ footer{padding-block:36px 48px;text-align:center;font-family:var(--f-label);font
       <h2><span class="h2">Analytics</span></h2>
     </div>
     <div class="kpis">
-      <div class="kpi sticker"><b>6,0 Mio.</b><small>Instagram Top View</small></div>
+      <div class="kpi sticker"><b>8,2 Mio.</b><small>Instagram Top View</small></div>
       <div class="kpi sticker"><b>1,2 Mio.</b><small>TikTok Top View</small></div>
-      <div class="kpi sticker"><b>5,9k</b><small>Follower Instagram</small></div>
-      <div class="kpi sticker"><b>5,2k</b><small>Follower TikTok</small></div>
+      <a class="kpi sticker" href="https://www.instagram.com/joanna_kleemann" target="_blank" rel="noopener"><b>5,6k</b><small>Follower Instagram ↗</small></a>
+      <a class="kpi sticker" href="https://www.tiktok.com/@joanna_kleemann" target="_blank" rel="noopener"><b>6k</b><small>Follower TikTok ↗</small></a>
     </div>
     <div class="shots" tabindex="0" aria-label="Analytics-Screenshots">
       <div class="shot slot"><img src="img/shot-6mio.jpg" alt="Reel mit 6 Mio. Views" loading="lazy"></div>
@@ -523,14 +527,14 @@ footer{padding-block:36px 48px;text-align:center;font-family:var(--f-label);font
           </div>
         </div>
         <div class="contact-row">
-          <span class="pill">
+          <a class="pill" href="https://www.instagram.com/joanna_kleemann" target="_blank" rel="noopener" aria-label="Joanna auf Instagram, 5,6k Follower">
             <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="9" fill="#FF3EA5" stroke="#1D1033" stroke-width="2"/><rect x="8" y="8" width="16" height="16" rx="5" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="16" cy="16" r="3.8" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="21.6" cy="10.4" r="1.4" fill="#fff"/></svg>
-            5,9k
-          </span>
-          <span class="pill">
+        5,6k <span class="pill-net">Instagram</span>
+      </a>
+          <a class="pill" href="https://www.tiktok.com/@joanna_kleemann" target="_blank" rel="noopener" aria-label="Joanna auf TikTok, 6k Follower">
             <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="9" fill="#1D1033"/><path d="M18 7v12.2a3.8 3.8 0 1 1-3.8-3.8" fill="none" stroke="#38C4FF" stroke-width="2.6" stroke-linecap="round" transform="translate(-1 1)"/><path d="M18 7v12.2a3.8 3.8 0 1 1-3.8-3.8" fill="none" stroke="#FF3EA5" stroke-width="2.6" stroke-linecap="round" transform="translate(1 -1)"/><path d="M18 7v12.2a3.8 3.8 0 1 1-3.8-3.8M18 7c.4 2.8 2.3 4.6 5 4.8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
-            5,2k
-          </span>
+        6k <span class="pill-net">TikTok</span>
+      </a>
           <a class="maillink" href="mailto:contact@joannakleemann.de">Mail öffnen →</a>
         </div>
         <p class="express sticker">⚡ 24–72h Express-Lieferung möglich</p>
