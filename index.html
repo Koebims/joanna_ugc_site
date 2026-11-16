@@ -51,9 +51,11 @@ section{padding-block:clamp(72px,10vw,128px)}
 
 /* ---------- Typo-Bausteine ---------- */
 .head{
-  font-family:var(--f-head);font-weight:900;font-style:italic;text-transform:uppercase;
-  font-size:clamp(2.2rem,5.6vw,4.4rem);line-height:.98;letter-spacing:-.01em;text-wrap:balance;
+  font-family:var(--f-serif);font-weight:500;font-style:italic;
+  font-size:clamp(2.4rem,5.4vw,4.4rem);line-height:1.04;letter-spacing:-.015em;text-wrap:balance;
 }
+.head span{font-weight:600}
+.head-xl{font-size:clamp(3.4rem,8vw,6rem);line-height:.95}
 .script{font-family:var(--f-script);font-weight:400;line-height:1;text-transform:none;letter-spacing:0}
 .label{
   font-family:var(--f-head);font-weight:700;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;
@@ -188,11 +190,6 @@ section{padding-block:clamp(72px,10vw,128px)}
 .logo .circ img{width:100%;height:100%;object-fit:cover}
 .logo small{font-family:var(--f-head);font-weight:700;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
 
-.fit{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:clamp(24px,3vw,36px);padding-inline:clamp(4px,2vw,24px)}
-.fit .label{color:var(--flame)}
-.fit-chips{display:flex;flex-wrap:wrap;gap:10px}
-.fit-chips li{border:1.5px solid var(--espresso);border-radius:999px;padding:.5em 1.05em;font-weight:700;font-size:.92rem;transition:background .25s,color .25s,border-color .25s,transform .25s}
-.fit-chips li:hover{background:var(--flame);border-color:var(--flame);color:#fff;transform:translateY(-2px)}
 
 /* ---------- Ablauf ---------- */
 .process{padding-bottom:0}
@@ -420,7 +417,7 @@ footer{padding-block:40px 56px}
     <div class="nav-links">
       <a href="#about">Über mich</a>
       <a href="#work">Videos</a>
-      <a href="#analytics">Analytics</a>
+      <a href="#analytics">Insights</a>
       <a href="#leistungen">Leistungen</a>
       <a href="#kontakt">Kontakt</a>
     </div>
@@ -435,7 +432,6 @@ footer{padding-block:40px 56px}
 <header class="hero" id="top">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="hello rv">Huhuu, ich bin</p>
       <h1 class="name script rv d1"><span>Joanna</span><span>Kleemann</span></h1>
       <svg class="swash rv d2" viewBox="0 0 440 24" fill="none" aria-hidden="true"><path d="M4 16C80 6 170 4 250 8s120 6 186-2" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
       <p class="role rv d2"><span class="label">UGC-Creatorin</span><i></i><span class="label">Influencerin</span><i></i><span class="label">Leipzig</span></p>
@@ -481,8 +477,6 @@ footer{padding-block:40px 56px}
         <h2 class="hello-head rv d1"><span class="hh">Huhuu,</span> ich bin <span class="jo">Joanna</span></h2>
         <p class="rv d1">UGC-Creatorin, Influencerin und selbstständige Tänzerin aus Leipzig. Ich bin eine <strong>sehr gute Storytellerin</strong> und bringe Produkte so rüber, wie man sie einer Freundin empfehlen würde – ehrlich, nahbar und mit Persönlichkeit.</p>
         <ul class="facts">
-          <li class="fact rv d1"><b>Jeden Tag</b><span>Erstelle seit September 2025 täglich Content</span></li>
-          <li class="fact rv d2"><b>Jede Woche</b><span>Aktive Kooperation mit HaarAnker – ein Organic Video pro Woche</span></li>
           <li class="fact rv d2"><b>Bühne &amp; Kamera</b><span>Content Creatorin &amp; selbstständige Tänzerin seit 2025, mit Bühnenerfahrung</span></li>
           <li class="fact rv d3"><b>DE · EN · ES</b><span>Deutsch (Muttersprache), Englisch (fließend), Spanisch (A2, ich lerne weiter!)</span></li>
         </ul>
@@ -491,7 +485,7 @@ footer{padding-block:40px 56px}
         <p class="intro script" aria-hidden="true">Let me introduce myself</p>
         <div class="phone"><div class="screen"><video src="video/intro.mp4" poster="img/vid-intro.jpg" preload="none" playsinline aria-label="Vorstellungsvideo von Joanna"></video></div>
           <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-        <figcaption class="label">Mein Vorstellungsvideo · mit Ton</figcaption>
+        <figcaption class="label">Mein Vorstellungsvideo</figcaption>
       </figure>
     </div>
   </section>
@@ -502,21 +496,14 @@ footer{padding-block:40px 56px}
         <div class="brands-copy">
           <span class="tag">Kooperationen</span>
           <h2 class="head">Marken, mit denen ich gearbeitet habe</h2>
-          <p class="lead">Von TV über Fintech bis Haarpflege – Content, der zur Marke passt und trotzdem nach mir klingt.</p>
         </div>
         <div class="logos">
-          <div class="logo"><div class="circ"><img src="img/logo-haaranker.png" alt="Haar-Anker" loading="lazy"></div><small>Laufende Koop</small></div>
-          <div class="logo"><div class="circ"><img src="img/logo-cabaia.png" alt="CABAIA" loading="lazy"></div><small>Kooperation</small></div>
-          <div class="logo"><div class="circ"><img src="img/logo-rtl2.png" alt="RTL ZWEI" loading="lazy"></div><small>TV · Storytime</small></div>
-          <div class="logo"><div class="circ"><img src="img/logo-nickel.png" alt="Nickel" loading="lazy"></div><small>Fintech</small></div>
-          <div class="logo"><div class="circ"><img src="img/logo-yubo.png" alt="Yubo" loading="lazy"></div><small>App · 2 Videos</small></div>
+          <div class="logo"><div class="circ"><img src="img/logo-haaranker.png" alt="Haar-Anker" loading="lazy"></div></div>
+          <div class="logo"><div class="circ"><img src="img/logo-cabaia.png" alt="CABAIA" loading="lazy"></div></div>
+          <div class="logo"><div class="circ"><img src="img/logo-rtl2.png" alt="RTL ZWEI" loading="lazy"></div></div>
+          <div class="logo"><div class="circ"><img src="img/logo-nickel.png" alt="Nickel" loading="lazy"></div></div>
+          <div class="logo"><div class="circ"><img src="img/logo-yubo.png" alt="Yubo" loading="lazy"></div></div>
         </div>
-      </div>
-      <div class="fit rv">
-        <p class="label">Perfekt für</p>
-        <ul class="fit-chips">
-          <li>Fitness &amp; Sport</li><li>Supplements</li><li>Beauty &amp; Skincare</li><li>Haarpflege</li><li>Fashion &amp; Accessoires</li><li>Home &amp; Lifestyle</li><li>Apps &amp; Fintech</li><li>Entertainment &amp; TV</li>
-        </ul>
       </div>
     </div>
   </section>
@@ -530,40 +517,40 @@ footer{padding-block:40px 56px}
         <figure class="vid rv">
           <div class="phone"><div class="screen"><video src="video/rtl2.mp4" poster="img/vid-rtl2.jpg" preload="none" playsinline loop aria-label="Kooperationsvideo für RTL ZWEI"></video></div>
             <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-          <figcaption>RTL ZWEI<small>Storytime · Entertainment</small></figcaption>
+          <figcaption>RTL ZWEI<small>Entertainment</small></figcaption>
         </figure>
         <figure class="vid rv d1">
           <div class="phone"><div class="screen"><video src="video/nickel.mp4" poster="img/vid-nickel.jpg" preload="none" playsinline loop aria-label="Kooperationsvideo für Nickel"></video></div>
             <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-          <figcaption>Nickel<small>Talking Head · Fintech</small></figcaption>
+          <figcaption>Nickel<small>Tech</small></figcaption>
         </figure>
         <figure class="vid rv d2">
           <div class="phone"><div class="screen"><video src="video/yubo.mp4" poster="img/vid-yubo.jpg" preload="none" playsinline loop aria-label="Kooperationsvideo für Yubo"></video></div>
             <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-          <figcaption>Yubo<small>Sketch · App</small></figcaption>
+          <figcaption>Yubo<small>Tech</small></figcaption>
         </figure>
         <figure class="vid rv d3">
           <div class="phone"><div class="screen"><video src="video/yubo2.mp4" poster="img/vid-yubo2.jpg" preload="none" playsinline loop aria-label="Zweites Kooperationsvideo für Yubo"></video></div>
             <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-          <figcaption>Yubo<small>POV · App</small></figcaption>
+          <figcaption>Yubo<small>Tech</small></figcaption>
         </figure>
       </div>
-      <h3 class="group label rv"><span>UGC</span></h3>
+      <h3 class="group label rv"><span>UGC-Beispielvideos</span></h3>
       <div class="phones">
         <figure class="vid rv d1">
           <div class="phone"><div class="screen"><video src="video/pickel.mp4" poster="img/vid-pickel.jpg" preload="none" playsinline loop aria-label="Vorher-Nachher-Video: Mein Geheimnis gegen Pickel"></video></div>
             <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-          <figcaption>Vorher &amp; Nachher<small>Problem Solving · Skincare</small></figcaption>
+          <figcaption>Vorher &amp; Nachher<small>Skincare</small></figcaption>
         </figure>
         <figure class="vid mid rv d2">
-          <div class="phone"><div class="screen"><video src="video/haut.mp4" poster="img/vid-haut.jpg" preload="none" playsinline loop aria-label="Vorher-Nachher-Video: Schluss mit gereizter Haut"></video></div>
-            <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-          <figcaption>Vorher &amp; Nachher<small>Problem Solving · Skincare</small></figcaption>
-        </figure>
-        <figure class="vid rv d3">
           <div class="phone"><div class="screen"><video src="video/pov.mp4" poster="img/vid-pov.jpg" preload="none" playsinline loop aria-label="POV-Video: Saugroboter"></video></div>
             <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-          <figcaption>POV Format<small>Produkt-Demo · Home</small></figcaption>
+          <figcaption>POV Format<small>Home</small></figcaption>
+        </figure>
+        <figure class="vid rv d3">
+          <div class="phone"><div class="screen"><video src="video/haut.mp4" poster="img/vid-haut.jpg" preload="none" playsinline loop aria-label="Vorher-Nachher-Video: Schluss mit gereizter Haut"></video></div>
+            <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
+          <figcaption>Vorher &amp; Nachher<small>Skincare</small></figcaption>
         </figure>
       </div>
       <p class="sound label">Antippen zum Abspielen · mit Ton</p>
@@ -575,14 +562,14 @@ footer{padding-block:40px 56px}
       <div class="broll-head">
         <div class="rv">
           <span class="script">B-Roll</span>
-          <h2 class="head">Produkt&shy;aufnahmen, die Lust machen</h2>
+          <h2 class="head">Produkte im besten Licht</h2>
         </div>
         <p class="lead rv d1">Ästhetische Close-ups und Detail-Shots für Ads, Landingpages und Social – ganz ohne Gesicht oder mit.</p>
       </div>
       <div class="clips">
-        <figure class="clip rv"><video src="video/broll-parfum.mp4" poster="img/vid-broll-parfum.jpg" muted loop playsinline preload="none" aria-label="B-Roll: Parfüm"></video><figcaption>Beauty · Parfüm</figcaption></figure>
-        <figure class="clip rv d1"><video src="video/broll-magnesium.mp4" poster="img/vid-broll-magnesium.jpg" muted loop playsinline preload="none" aria-label="B-Roll: Nahrungsergänzung Close-up"></video><figcaption>Supplements · Close-up</figcaption></figure>
-        <figure class="clip rv d2"><video src="video/broll-glas.mp4" poster="img/vid-broll-glas.jpg" muted loop playsinline preload="none" aria-label="B-Roll: Glas wird befüllt"></video><figcaption>Home · Lifestyle</figcaption></figure>
+        <figure class="clip rv"><video src="video/broll-parfum.mp4" poster="img/vid-broll-parfum.jpg" muted loop playsinline preload="none" aria-label="B-Roll: Parfüm"></video><figcaption>Beauty</figcaption></figure>
+        <figure class="clip rv d1"><video src="video/broll-magnesium.mp4" poster="img/vid-broll-magnesium.jpg" muted loop playsinline preload="none" aria-label="B-Roll: Nahrungsergänzung Close-up"></video><figcaption>Supplements</figcaption></figure>
+        <figure class="clip rv d2"><video src="video/broll-glas.mp4" poster="img/vid-broll-glas.jpg" muted loop playsinline preload="none" aria-label="B-Roll: Glas wird befüllt"></video><figcaption>Food &amp; Drinks</figcaption></figure>
       </div>
     </div>
   </section>
@@ -591,8 +578,7 @@ footer{padding-block:40px 56px}
     <div class="wrap">
       <div class="top">
         <div class="rv">
-          <span class="script">Analytics</span>
-          <h2 class="head">Zahlen, die für sich sprechen</h2>
+          <h2 class="head head-xl">Insights</h2>
         </div>
         <p class="lead rv d1">Echte Reichweite aus organischem Content – hier ein paar meiner erfolgreichsten Reels.</p>
       </div>
