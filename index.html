@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="UGC-Portfolio von Joanna Kleemann – UGC Creator, Influencerin und Tänzerin aus Leipzig.">
+<meta name="description" content="UGC-Portfolio von Joanna Kleemann – UGC Creator und Influencerin aus Leipzig.">
 <meta name="theme-color" content="#F5EFE7">
 <title>Joanna Kleemann UGC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -175,6 +175,9 @@ section{padding-block:clamp(72px,10vw,128px)}
 .intro{font-size:clamp(2.2rem,3.4vw,2.9rem);color:var(--flame-l);transform:rotate(-6deg);white-space:nowrap;margin-bottom:-4px}
 .intro-phone figcaption{color:color-mix(in srgb,var(--cream) 80%,transparent)}
 
+.langs{display:flex;flex-wrap:wrap;gap:8px;margin-top:-8px}
+.langs span{font-family:var(--f-head);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;background:var(--peach);color:var(--flame-d);padding:.55em 1em;border-radius:999px}
+
 /* ---------- Marken ---------- */
 .brands{padding-block:clamp(64px,8vw,104px)}
 .brands-box{display:grid;grid-template-columns:1fr auto;gap:clamp(28px,5vw,64px);align-items:center;background:var(--paper);border-radius:36px;padding:clamp(28px,5vw,60px);box-shadow:0 1px 0 rgba(43,32,27,.06)}
@@ -189,6 +192,24 @@ section{padding-block:clamp(72px,10vw,128px)}
 .names{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px 0;border-top:1px solid rgba(43,32,27,.14);padding-top:22px}
 .names li{font-family:var(--f-head);font-weight:900;font-style:italic;text-transform:uppercase;font-size:clamp(1rem,2vw,1.4rem);display:inline-flex;align-items:center}
 .names li + li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--flame);margin-inline:clamp(12px,2vw,22px)}
+
+.fit{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:clamp(24px,3vw,36px);padding-inline:clamp(4px,2vw,24px)}
+.fit .label{color:var(--flame)}
+.fit-chips{display:flex;flex-wrap:wrap;gap:10px}
+.fit-chips li{border:1.5px solid var(--espresso);border-radius:999px;padding:.5em 1.05em;font-weight:700;font-size:.92rem;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.fit-chips li:hover{background:var(--flame);border-color:var(--flame);color:#fff;transform:translateY(-2px)}
+
+/* ---------- Ablauf ---------- */
+.process{padding-bottom:0}
+.process-head{display:flex;flex-direction:column;gap:16px;margin-bottom:clamp(32px,5vw,56px)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:0;padding:0;list-style:none}
+.step{position:relative;background:var(--paper);border-radius:26px;padding:26px 24px 28px;display:flex;flex-direction:column;gap:10px;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.step:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.step::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--flame);transform:scaleX(.25);transform-origin:left;transition:transform .4s ease}
+.step:hover::after{transform:scaleX(1)}
+.step .no{font-family:var(--f-head);font-weight:900;font-style:italic;font-size:3rem;line-height:1;color:var(--flame)}
+.step h3{font-family:var(--f-head);font-weight:800;font-size:1.2rem}
+.step p{color:var(--ink-soft);font-size:.95rem;line-height:1.5}
 
 /* ---------- Videos ---------- */
 .work{background:var(--taupe-d);color:var(--cream);text-align:center;position:relative;overflow:hidden}
@@ -321,6 +342,9 @@ section{padding-block:clamp(72px,10vw,128px)}
 footer{padding-block:40px 56px}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;color:var(--ink-soft)}
 .foot .brand{color:var(--flame)}
+.foot-links{display:flex;gap:24px}
+.foot-links a{font-family:var(--f-head);font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
+.foot-links a:hover{color:var(--flame)}
 
 /* Toast */
 .toast{
@@ -343,6 +367,7 @@ footer{padding-block:40px 56px}
   .services-copy{position:static}
   .brands-box{grid-template-columns:1fr}
   .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .shots{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 26px;margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter);scrollbar-width:none}
   .shots::-webkit-scrollbar{display:none}
   .shot{flex:0 0 min(72vw,300px);scroll-snap-align:start}
@@ -374,6 +399,7 @@ footer{padding-block:40px 56px}
   .ring text{font-size:8.6px}
   .ring .core{font-size:2rem}
   .facts{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
   .cta-row .btn{flex:1 1 auto}
   .list li{grid-template-columns:40px 1fr}
   .list .pill{grid-column:2;justify-self:start}
@@ -415,8 +441,9 @@ footer{padding-block:40px 56px}
       <p class="hello rv">Hi, ich bin</p>
       <h1 class="name script rv d1"><span>Joanna</span><span>Kleemann</span></h1>
       <svg class="swash rv d2" viewBox="0 0 440 24" fill="none" aria-hidden="true"><path d="M4 16C80 6 170 4 250 8s120 6 186-2" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
-      <p class="role rv d2"><span class="label">UGC Creator</span><i></i><span class="label">Influencerin</span><i></i><span class="label">Tänzerin</span><i></i><span class="label">Leipzig</span></p>
-      <p class="lead rv d2">Authentischer Content mit echtem Storytelling – nahbar, humorvoll und mit ganz viel Energie. Damit deine Marke nicht weggescrollt wird.</p>
+      <p class="role rv d2"><span class="label">UGC Creator</span><i></i><span class="label">Influencerin</span><i></i><span class="label">Storytellerin</span><i></i><span class="label">Leipzig</span></p>
+      <p class="lead rv d2">UGC, der die Aufmerksamkeit hält: authentisch, mit echtem Storytelling und ganz viel Energie. Damit deine Marke nicht weggescrollt wird.</p>
+      <p class="langs rv d2"><span>Deutsch &amp; Englisch</span><span>Express 24–72h</span><span>Organic &amp; Paid</span></p>
       <div class="cta-row rv d3">
         <a class="btn btn-fill" href="#kontakt">Let’s work together <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-line" href="#work">Videos ansehen</a>
@@ -442,7 +469,7 @@ footer{padding-block:40px 56px}
       </div>
       <div class="ring" aria-hidden="true">
         <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-47 0a47 47 0 1 1 94 0a47 47 0 1 1-94 0"/></defs>
-          <text><textPath href="#circ">UGC CREATOR • TÄNZERIN • STORYTELLERIN • </textPath></text></svg>
+          <text><textPath href="#circ">UGC CREATOR • INFLUENCERIN • STORYTELLERIN • </textPath></text></svg>
         <span class="core">JK</span>
       </div>
     </div>
@@ -450,8 +477,8 @@ footer{padding-block:40px 56px}
 </header>
 
 <div class="marquee" aria-hidden="true"><div class="track">
-  <span>Daily Content</span><span class="s">storytelling</span><span>Fitness</span><span class="s">dance</span><span>Vorher &amp; Nachher</span><span class="s">POV</span><span>Express 24–72h</span><span class="s">Leipzig</span>
-  <span>Daily Content</span><span class="s">storytelling</span><span>Fitness</span><span class="s">dance</span><span>Vorher &amp; Nachher</span><span class="s">POV</span><span>Express 24–72h</span><span class="s">Leipzig</span>
+  <span>Daily Content</span><span class="s">storytelling</span><span>Fitness</span><span class="s">hooks</span><span>Vorher &amp; Nachher</span><span class="s">POV</span><span>Express 24–72h</span><span class="s">Leipzig</span>
+  <span>Daily Content</span><span class="s">storytelling</span><span>Fitness</span><span class="s">hooks</span><span>Vorher &amp; Nachher</span><span class="s">POV</span><span>Express 24–72h</span><span class="s">Leipzig</span>
 </div></div>
 
 <main>
@@ -493,6 +520,12 @@ footer{padding-block:40px 56px}
           <li>RTL ZWEI</li><li>Nickel</li><li>Yubo</li><li>HaarAnker</li><li>CABAIA</li>
         </ul>
       </div>
+      <div class="fit rv">
+        <p class="label">Perfekt für</p>
+        <ul class="fit-chips">
+          <li>Fitness &amp; Sport</li><li>Supplements</li><li>Beauty &amp; Skincare</li><li>Haarpflege</li><li>Fashion &amp; Accessoires</li><li>Home &amp; Lifestyle</li><li>Apps &amp; Fintech</li><li>Entertainment &amp; TV</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -505,22 +538,22 @@ footer{padding-block:40px 56px}
         <figure class="vid rv">
           <div class="phone"><div class="screen"><video src="video/rtl2.mp4" poster="img/vid-rtl2.jpg" preload="none" playsinline loop aria-label="Kooperationsvideo für RTL ZWEI"></video></div>
             <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-          <figcaption>RTL ZWEI<small>Kooperation · Storytime</small></figcaption>
+          <figcaption>RTL ZWEI<small>Storytime · Entertainment</small></figcaption>
         </figure>
         <figure class="vid rv d1">
           <div class="phone"><div class="screen"><video src="video/nickel.mp4" poster="img/vid-nickel.jpg" preload="none" playsinline loop aria-label="Kooperationsvideo für Nickel"></video></div>
             <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-          <figcaption>Nickel<small>Kooperation · Finanzen</small></figcaption>
+          <figcaption>Nickel<small>Talking Head · Fintech</small></figcaption>
         </figure>
         <figure class="vid rv d2">
           <div class="phone"><div class="screen"><video src="video/yubo.mp4" poster="img/vid-yubo.jpg" preload="none" playsinline loop aria-label="Kooperationsvideo für Yubo"></video></div>
             <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-          <figcaption>Yubo<small>Kooperation · Sketch</small></figcaption>
+          <figcaption>Yubo<small>Sketch · App</small></figcaption>
         </figure>
         <figure class="vid rv d3">
           <div class="phone"><div class="screen"><video src="video/yubo2.mp4" poster="img/vid-yubo2.jpg" preload="none" playsinline loop aria-label="Zweites Kooperationsvideo für Yubo"></video></div>
             <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-          <figcaption>Yubo<small>Kooperation · POV</small></figcaption>
+          <figcaption>Yubo<small>POV · App</small></figcaption>
         </figure>
       </div>
       <h3 class="group label rv"><span>UGC</span></h3>
@@ -528,17 +561,17 @@ footer{padding-block:40px 56px}
         <figure class="vid rv d1">
           <div class="phone"><div class="screen"><video src="video/pickel.mp4" poster="img/vid-pickel.jpg" preload="none" playsinline loop aria-label="Vorher-Nachher-Video: Mein Geheimnis gegen Pickel"></video></div>
             <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-          <figcaption>Vorher &amp; Nachher<small>Skincare · Pickel</small></figcaption>
+          <figcaption>Vorher &amp; Nachher<small>Problem Solving · Skincare</small></figcaption>
         </figure>
         <figure class="vid mid rv d2">
           <div class="phone"><div class="screen"><video src="video/haut.mp4" poster="img/vid-haut.jpg" preload="none" playsinline loop aria-label="Vorher-Nachher-Video: Schluss mit gereizter Haut"></video></div>
             <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-          <figcaption>Vorher &amp; Nachher<small>Skincare · gereizte Haut</small></figcaption>
+          <figcaption>Vorher &amp; Nachher<small>Problem Solving · Skincare</small></figcaption>
         </figure>
         <figure class="vid rv d3">
           <div class="phone"><div class="screen"><video src="video/pov.mp4" poster="img/vid-pov.jpg" preload="none" playsinline loop aria-label="POV-Video: Saugroboter"></video></div>
             <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
-          <figcaption>POV Format<small>Home · Saugroboter</small></figcaption>
+          <figcaption>POV Format<small>Produkt-Demo · Home</small></figcaption>
         </figure>
       </div>
       <p class="sound label">Antippen zum Abspielen · mit Ton</p>
@@ -609,6 +642,21 @@ footer{padding-block:40px 56px}
     </div>
   </section>
 
+  <section class="process" id="ablauf">
+    <div class="wrap">
+      <div class="process-head">
+        <span class="tag rv">Ablauf</span>
+        <h2 class="head rv d1">So arbeiten wir zusammen</h2>
+      </div>
+      <ol class="steps">
+        <li class="step rv"><span class="no">01</span><h3>Briefing</h3><p>Du erzählst mir von Produkt, Zielgruppe und Ziel – Awareness, Conversion oder Community.</p></li>
+        <li class="step rv d1"><span class="no">02</span><h3>Skript &amp; Hooks</h3><p>Ich entwickle Konzept, Storyline und mehrere Hook-Ideen, die zum Weiterschauen bringen.</p></li>
+        <li class="step rv d2"><span class="no">03</span><h3>Dreh &amp; Schnitt</h3><p>Authentisch gefilmt, sauber geschnitten – auf Wunsch mit Untertiteln und On-Screen Text.</p></li>
+        <li class="step rv d3"><span class="no">04</span><h3>Lieferung</h3><p>Fertige Videos im gewünschten Format, auf Wunsch als Express-Lieferung in 24–72h.</p></li>
+      </ol>
+    </div>
+  </section>
+
   <section id="leistungen">
     <div class="wrap services-grid">
       <div class="services-copy">
@@ -655,7 +703,7 @@ footer{padding-block:40px 56px}
 <footer>
   <div class="wrap foot">
     <a class="brand" href="#top">Joanna Kleemann</a>
-    <span class="label">UGC Creator · Leipzig</span>
+    <nav class="foot-links" aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="mailto:contact@joannakleemann.de">Kontakt</a></nav>
   </div>
 </footer>
 

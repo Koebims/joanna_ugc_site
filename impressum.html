@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F5EFE7">
+<title>Impressum · Joanna Kleemann</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&family=Montserrat:ital,wght@0,700;0,800;1,900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+<style>
+:root{
+  --cream:#F5EFE7;--paper:#FFFCF8;--espresso:#2B201B;--ink-soft:#6B5A50;
+  --flame:#E4572E;--flame-d:#C9441E;--peach:#FFD9C7;
+  --f-script:"Sacramento","Segoe Script",cursive;
+  --f-head:"Montserrat",system-ui,"Segoe UI",sans-serif;
+  --f-body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gutter:max(16px,4.5vw);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--espresso);font-family:var(--f-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--flame);outline-offset:3px;border-radius:6px}
+.wrap{max-width:860px;margin-inline:auto;padding-inline:var(--gutter)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:var(--f-script);font-size:2.1rem;color:var(--flame);text-decoration:none;line-height:1;padding-top:6px}
+.back{font-family:var(--f-head);font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:.5em}
+.back:hover{color:var(--flame)}
+.back svg{width:1.1em;height:1.1em}
+header{padding-block:clamp(40px,8vw,88px) clamp(24px,4vw,40px)}
+.script{font-family:var(--f-script);font-size:clamp(2.6rem,6vw,3.6rem);color:var(--flame);line-height:1;display:block;margin-bottom:-4px}
+h1{margin:0;font-family:var(--f-head);font-weight:900;font-style:italic;text-transform:uppercase;font-size:clamp(2.4rem,7vw,4.2rem);line-height:1}
+.card{background:var(--paper);border-radius:32px;padding:clamp(24px,5vw,52px);display:grid;gap:clamp(24px,3.5vw,36px);margin-bottom:clamp(56px,8vw,96px)}
+.block{display:grid;grid-template-columns:220px 1fr;gap:8px 32px;padding-bottom:clamp(24px,3.5vw,36px);border-bottom:1px solid rgba(43,32,27,.12)}
+.block:last-child{border-bottom:0;padding-bottom:0}
+h2{margin:0;font-family:var(--f-head);font-weight:800;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--flame-d);padding-top:4px}
+p{margin:0}
+p + p{margin-top:12px}
+.name{font-family:var(--f-head);font-weight:800;font-size:1.15rem}
+.muted{color:var(--ink-soft);font-size:.92rem}
+.contact a{text-decoration-color:var(--flame);text-underline-offset:3px;font-weight:700}
+.contact a:hover{color:var(--flame)}
+footer{padding-block:0 48px;color:var(--ink-soft);font-size:.9rem}
+@media (max-width:640px){
+  .block{grid-template-columns:1fr}
+}
+</style>
+</head><body>
+<div class="wrap">
+  <nav class="nav" aria-label="Navigation">
+    <a class="brand" href="index.html">Joanna</a>
+    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Zur Startseite</a>
+  </nav>
+
+  <header>
+    <span class="script">rechtliches</span>
+    <h1>Impressum</h1>
+  </header>
+
+  <main class="card">
+    <section class="block">
+      <h2>Inhalte gemäß § 5 DDG</h2>
+      <div>
+        <p class="name">Joanna Kleemann</p>
+        <p>c/o IP-Management #9506<br>Ludwig-Erhard-Straße 18<br>20459 Hamburg</p>
+        <p><span class="muted">Alternative Postanschrift:</span><br>Ludwig-Erhard-Str. 18, 20459, Hamburg</p>
+      </div>
+    </section>
+
+    <section class="block contact">
+      <h2>Kontaktdaten</h2>
+      <div>
+        <p>E-Mail: <a href="mailto:contact@joannakleemann.de">contact@joannakleemann.de</a></p>
+        <p>Telefon: <a href="tel:+4940696328451">040 696328451</a></p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Umsatzsteuer-ID</h2>
+      <div>
+        <p class="muted">Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
+        <p>DE368439315</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Berufsbezeichnung</h2>
+      <div>
+        <p class="muted">Berufsbezeichnung und berufsrechtliche Regelungen:</p>
+        <p>Berufsbezeichnung: UGC Content Creator und Influencerin</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© Joanna Kleemann · <a href="index.html">Zurück zum Portfolio</a></footer>
+</div>
+</body></html>
