@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="UGC-Portfolio von Joanna Kleemann – UGC Creator und Influencerin aus Leipzig.">
+<meta name="description" content="UGC-Portfolio von Joanna Kleemann – UGC-Creatorin und Influencerin aus Leipzig.">
 <meta name="theme-color" content="#F5EFE7">
 <title>Joanna Kleemann UGC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&family=Montserrat:ital,wght@0,500;0,700;0,800;1,800;1,900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=Sacramento&family=Montserrat:ital,wght@0,500;0,700;0,800;1,800;1,900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
 <style>
 /* Editorial-warm: Creme, Taupe, Salbei und Butter wie ein Moodboard –
    Joannas Haarfarbe (Flamme) ist der einzige laute Akzent. */
@@ -29,6 +29,7 @@
 
   --f-script:"Sacramento","Segoe Script","Brush Script MT",cursive;
   --f-head:"Montserrat",system-ui,"Segoe UI",sans-serif;
+  --f-serif:"Fraunces",Georgia,"Times New Roman",serif;
   --f-body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 
   --r-lg:28px;
@@ -147,19 +148,16 @@ section{padding-block:clamp(72px,10vw,128px)}
 .ring .core{font-family:var(--f-script);font-size:2.6rem;line-height:1;color:var(--flame);padding-top:6px}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* ---------- Laufband ---------- */
-.marquee{background:var(--flame);overflow:hidden;padding-block:18px;white-space:nowrap;border-block:1px solid rgba(43,32,27,.08)}
-.track{display:inline-flex;animation:slide 38s linear infinite}
-.track span{display:inline-flex;align-items:center;gap:.9em;padding-inline:.45em;font-family:var(--f-head);font-weight:900;font-style:italic;text-transform:uppercase;font-size:clamp(1.2rem,2.4vw,1.8rem);color:var(--paper)}
-.track span.s{font-family:var(--f-script);font-style:normal;font-weight:400;text-transform:none;font-size:clamp(2rem,3.8vw,2.9rem);color:var(--espresso)}
-.track span::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--butter);margin-left:.45em}
-@keyframes slide{to{transform:translateX(-50%)}}
 
 /* ---------- Über mich ---------- */
 .about{background:var(--taupe);color:var(--cream);position:relative;overflow:hidden}
 .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,96px);align-items:center}
 .about-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
 .about .head span{color:var(--flame-l)}
+.hello-head{font-family:var(--f-serif);font-weight:500;font-style:italic;font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:1.02;letter-spacing:-.01em;color:var(--paper)}
+.hello-head .hh{font-family:var(--f-script);font-style:normal;font-weight:400;font-size:1.35em;color:var(--butter);display:inline-block;transform:rotate(-4deg);margin-right:.08em;line-height:.9}
+.hello-head .jo{color:var(--flame-l);font-weight:600}
+.tag-xl{font-size:clamp(1.05rem,1.8vw,1.35rem);padding:.6em 1.3em;box-shadow:0 10px 24px -10px rgba(228,87,46,.7)}
 .about p{color:color-mix(in srgb,var(--cream) 88%,transparent);max-width:54ch}
 .about strong{color:var(--paper)}
 .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:6px}
@@ -180,18 +178,15 @@ section{padding-block:clamp(72px,10vw,128px)}
 
 /* ---------- Marken ---------- */
 .brands{padding-block:clamp(64px,8vw,104px)}
-.brands-box{display:grid;grid-template-columns:1fr auto;gap:clamp(28px,5vw,64px);align-items:center;background:var(--paper);border-radius:36px;padding:clamp(28px,5vw,60px);box-shadow:0 1px 0 rgba(43,32,27,.06)}
+.brands-box{display:grid;grid-template-columns:1fr;gap:clamp(28px,5vw,64px);align-items:center;background:var(--paper);border-radius:36px;padding:clamp(28px,5vw,60px);box-shadow:0 1px 0 rgba(43,32,27,.06)}
 .brands-copy{display:flex;flex-direction:column;gap:16px;align-items:flex-start;min-width:0}
 .brands .head{font-size:clamp(1.8rem,3.8vw,2.9rem)}
-.logos{display:flex;gap:clamp(16px,3vw,32px);flex-wrap:wrap}
+.logos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(14px,2.4vw,32px)}
 .logo{display:flex;flex-direction:column;align-items:center;gap:12px}
-.logo .circ{width:clamp(120px,16vw,180px);aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .35s cubic-bezier(.3,1.5,.5,1)}
+.logo .circ{background:#fff;width:min(100%,170px);aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .35s cubic-bezier(.3,1.5,.5,1)}
 .logo:hover .circ{transform:scale(1.06) rotate(-4deg)}
 .logo .circ img{width:100%;height:100%;object-fit:cover}
 .logo small{font-family:var(--f-head);font-weight:700;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
-.names{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px 0;border-top:1px solid rgba(43,32,27,.14);padding-top:22px}
-.names li{font-family:var(--f-head);font-weight:900;font-style:italic;text-transform:uppercase;font-size:clamp(1rem,2vw,1.4rem);display:inline-flex;align-items:center}
-.names li + li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--flame);margin-inline:clamp(12px,2vw,22px)}
 
 .fit{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:clamp(24px,3vw,36px);padding-inline:clamp(4px,2vw,24px)}
 .fit .label{color:var(--flame)}
@@ -399,6 +394,8 @@ footer{padding-block:40px 56px}
   .ring text{font-size:8.6px}
   .ring .core{font-size:2rem}
   .facts{grid-template-columns:1fr}
+  .logos{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:22px}
+  .logo small{font-size:.58rem;text-align:center}
   .steps{grid-template-columns:1fr}
   .cta-row .btn{flex:1 1 auto}
   .list li{grid-template-columns:40px 1fr}
@@ -410,7 +407,7 @@ footer{padding-block:40px 56px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .track,.ring svg,.float,.blob{animation:none}
+  .ring svg,.float,.blob{animation:none}
   .js .rv{opacity:1;transform:none;transition:none}
 }
 </style>
@@ -438,10 +435,10 @@ footer{padding-block:40px 56px}
 <header class="hero" id="top">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="hello rv">Hi, ich bin</p>
+      <p class="hello rv">Huhuu, ich bin</p>
       <h1 class="name script rv d1"><span>Joanna</span><span>Kleemann</span></h1>
       <svg class="swash rv d2" viewBox="0 0 440 24" fill="none" aria-hidden="true"><path d="M4 16C80 6 170 4 250 8s120 6 186-2" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
-      <p class="role rv d2"><span class="label">UGC Creator</span><i></i><span class="label">Influencerin</span><i></i><span class="label">Storytellerin</span><i></i><span class="label">Leipzig</span></p>
+      <p class="role rv d2"><span class="label">UGC-Creatorin</span><i></i><span class="label">Influencerin</span><i></i><span class="label">Leipzig</span></p>
       <p class="lead rv d2">UGC, der die Aufmerksamkeit hält: authentisch, mit echtem Storytelling und ganz viel Energie. Damit deine Marke nicht weggescrollt wird.</p>
       <p class="langs rv d2"><span>Deutsch &amp; Englisch</span><span>Express 24–72h</span><span>Organic &amp; Paid</span></p>
       <div class="cta-row rv d3">
@@ -469,25 +466,20 @@ footer{padding-block:40px 56px}
       </div>
       <div class="ring" aria-hidden="true">
         <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-47 0a47 47 0 1 1 94 0a47 47 0 1 1-94 0"/></defs>
-          <text><textPath href="#circ">UGC CREATOR • INFLUENCERIN • STORYTELLERIN • </textPath></text></svg>
+          <text><textPath href="#circ">UGC-CREATORIN • INFLUENCERIN • LEIPZIG • </textPath></text></svg>
         <span class="core">JK</span>
       </div>
     </div>
   </div>
 </header>
 
-<div class="marquee" aria-hidden="true"><div class="track">
-  <span>Daily Content</span><span class="s">storytelling</span><span>Fitness</span><span class="s">hooks</span><span>Vorher &amp; Nachher</span><span class="s">POV</span><span>Express 24–72h</span><span class="s">Leipzig</span>
-  <span>Daily Content</span><span class="s">storytelling</span><span>Fitness</span><span class="s">hooks</span><span>Vorher &amp; Nachher</span><span class="s">POV</span><span>Express 24–72h</span><span class="s">Leipzig</span>
-</div></div>
-
 <main>
   <section class="about" id="about">
     <div class="wrap about-grid">
       <div class="about-copy">
-        <span class="tag rv">Wieso ausgerechnet ich?</span>
-        <h2 class="head rv d1">Hi, ich bin <span>Joanna</span></h2>
-        <p class="rv d1">UGC Creator, Influencerin und selbstständige Tänzerin aus Leipzig. Ich bin eine <strong>sehr gute Storytellerin</strong> und bringe Produkte so rüber, wie man sie einer Freundin empfehlen würde – ehrlich, nahbar und mit Persönlichkeit.</p>
+        <span class="tag tag-xl rv">Wieso ausgerechnet ich?</span>
+        <h2 class="hello-head rv d1"><span class="hh">Huhuu,</span> ich bin <span class="jo">Joanna</span></h2>
+        <p class="rv d1">UGC-Creatorin, Influencerin und selbstständige Tänzerin aus Leipzig. Ich bin eine <strong>sehr gute Storytellerin</strong> und bringe Produkte so rüber, wie man sie einer Freundin empfehlen würde – ehrlich, nahbar und mit Persönlichkeit.</p>
         <ul class="facts">
           <li class="fact rv d1"><b>Jeden Tag</b><span>Erstelle seit September 2025 täglich Content</span></li>
           <li class="fact rv d2"><b>Jede Woche</b><span>Aktive Kooperation mit HaarAnker – ein Organic Video pro Woche</span></li>
@@ -515,10 +507,10 @@ footer{padding-block:40px 56px}
         <div class="logos">
           <div class="logo"><div class="circ"><img src="img/logo-haaranker.png" alt="Haar-Anker" loading="lazy"></div><small>Laufende Koop</small></div>
           <div class="logo"><div class="circ"><img src="img/logo-cabaia.png" alt="CABAIA" loading="lazy"></div><small>Kooperation</small></div>
+          <div class="logo"><div class="circ"><img src="img/logo-rtl2.png" alt="RTL ZWEI" loading="lazy"></div><small>TV · Storytime</small></div>
+          <div class="logo"><div class="circ"><img src="img/logo-nickel.png" alt="Nickel" loading="lazy"></div><small>Fintech</small></div>
+          <div class="logo"><div class="circ"><img src="img/logo-yubo.png" alt="Yubo" loading="lazy"></div><small>App · 2 Videos</small></div>
         </div>
-        <ul class="names">
-          <li>RTL ZWEI</li><li>Nickel</li><li>Yubo</li><li>HaarAnker</li><li>CABAIA</li>
-        </ul>
       </div>
       <div class="fit rv">
         <p class="label">Perfekt für</p>
