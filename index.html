@@ -274,17 +274,19 @@ section{padding-block:clamp(72px,10vw,128px)}
 .shot:hover{transform:translateY(-6px) scale(1.03)}
 
 /* ---------- Specials ---------- */
-.special{background:var(--flame);position:relative;overflow:hidden}
-.special-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(40px,6vw,96px);align-items:center}
-.collage{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:repeat(3,auto);gap:12px;min-width:0}
-.collage .c{border-radius:22px;overflow:hidden;box-shadow:var(--shadow-sm);background:var(--flame-d)}
+.special{background:linear-gradient(160deg,#FBE3D5 0%,#F7D3BF 100%);position:relative;overflow:hidden}
+.special-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,96px);align-items:center}
+.collage{display:grid;grid-template-columns:1.75fr 1fr;grid-template-rows:repeat(3,minmax(0,1fr));gap:12px;min-width:0}
+.collage .c{border-radius:22px;overflow:hidden;box-shadow:var(--shadow-sm);background:var(--sand)}
 .special .tag{background:var(--espresso);color:var(--butter)}
 .collage .c img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
 .collage .c:hover img{transform:scale(1.06)}
-.collage .c-main{grid-row:1/4;border-radius:200px 200px 22px 22px}
-.collage .c-s{aspect-ratio:4/3}
+.collage .c-main{grid-row:1/4;aspect-ratio:3/4;border-radius:140px 140px 22px 22px}
+.collage .c{position:relative}
+.collage .c-s{min-height:0}
+.collage .c img{position:absolute;inset:0}
 .special-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
-.special-copy .script{font-size:clamp(3.4rem,7vw,5.4rem);color:var(--paper);line-height:.9;transform:rotate(-3deg);transform-origin:left}
+.special-copy .script{font-size:clamp(3.4rem,7vw,5.4rem);color:var(--flame);line-height:.9;transform:rotate(-3deg);transform-origin:left}
 .special-copy .big{font-family:var(--f-head);font-weight:800;font-size:clamp(1.3rem,2.3vw,1.75rem);line-height:1.3;color:var(--espresso)}
 .special-copy .big em{font-style:italic;color:var(--paper);background:var(--espresso);padding:0 .3em;border-radius:6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .checks{display:flex;flex-direction:column;gap:10px}
@@ -337,6 +339,16 @@ footer{padding-block:40px 56px}
 .foot-links{display:flex;gap:24px}
 .foot-links a{font-family:var(--f-head);font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
 .foot-links a:hover{color:var(--flame)}
+
+/* Testleiste – gehört nicht zur Website */
+.testbar{position:relative;z-index:60;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 14px;padding:8px 16px;
+  background:repeating-linear-gradient(-45deg,#111 0 14px,#262626 14px 28px);color:#F2F2F2;
+  font:600 12px/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.04em;border-bottom:3px dashed #FFD400}
+.testbar b{background:#FFD400;color:#111;padding:3px 7px;border-radius:3px;letter-spacing:.1em}
+.testbar nav{display:flex;gap:6px}
+.testbar a{color:#F2F2F2;text-decoration:none;border:1px solid #777;padding:5px 11px;border-radius:4px;background:#111}
+.testbar a[aria-current="page"]{background:#FFD400;color:#111;border-color:#FFD400}
+.testbar a:hover{border-color:#FFD400}
 
 /* Toast */
 .toast{
@@ -399,7 +411,7 @@ footer{padding-block:40px 56px}
   .list .pill{grid-column:2;justify-self:start}
   .mailbox{flex-direction:column;align-items:stretch;border-radius:24px;width:100%}
   .mailbox .mail{padding:10px 8px 4px;text-align:center}
-  .collage .c-main{border-radius:140px 140px 18px 18px}
+  .collage .c-main{border-radius:100px 100px 18px 18px}
   .contact-box{border-radius:28px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -411,6 +423,10 @@ footer{padding-block:40px 56px}
 </head><body>
 <script>document.documentElement.classList.add('js')</script>
 
+<div class="testbar" role="region" aria-label="Testansicht">
+  <b>TEST</b><span>Nur zum Vergleichen – nicht Teil der Website</span>
+  <nav><a href="index.html" aria-current="page">Variante 1</a><a href="v2.html">Variante 2</a></nav>
+</div>
 <nav class="nav" aria-label="Hauptnavigation">
   <div class="wrap nav-in">
     <a class="brand" href="#top">Joanna</a>
@@ -553,7 +569,6 @@ footer{padding-block:40px 56px}
           <figcaption>Vorher &amp; Nachher<small>Skincare</small></figcaption>
         </figure>
       </div>
-      <p class="sound label">Antippen zum Abspielen · mit Ton</p>
     </div>
   </section>
 
