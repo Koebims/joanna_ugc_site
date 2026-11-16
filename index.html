@@ -134,7 +134,7 @@ section{padding-block:clamp(72px,10vw,128px)}
 .float .dot{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex:none}
 .float .dot svg{width:20px;height:20px}
 .float.f1{left:-12%;top:46%}
-.float.f1 .dot{background:var(--flame);color:#fff}
+.float.f1 .dot{background:linear-gradient(45deg,#F9A13A,#E4405F 45%,#B23AA8 75%,#6A4BD1);color:#fff}
 .float.f2{right:-9%;top:12%;animation-delay:-3s}
 .float.f2 .dot{background:var(--espresso);color:#fff}
 @keyframes bob{50%{transform:translateY(-10px)}}
@@ -164,18 +164,13 @@ section{padding-block:clamp(72px,10vw,128px)}
 .fact:hover{background:color-mix(in srgb,var(--espresso) 30%,transparent);transform:translateY(-3px)}
 .fact b{display:block;font-family:var(--f-head);font-weight:900;font-style:italic;text-transform:uppercase;font-size:1.15rem;color:var(--butter);line-height:1.15}
 .fact span{display:block;font-size:.93rem;line-height:1.45;margin-top:6px;color:var(--cream)}
-.intro{font-size:clamp(2.6rem,5vw,3.8rem);color:var(--butter);transform:rotate(-4deg);transform-origin:left;margin-top:8px}
-
-.polaroid-stack{position:relative;justify-self:center;width:min(100%,420px);padding:20px 0 40px}
-.polaroid{background:var(--paper);padding:14px 14px 0;border-radius:6px;box-shadow:var(--shadow);transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
-.polaroid .ph{aspect-ratio:4/5;overflow:hidden;border-radius:3px}
-.polaroid img{width:100%;height:100%;object-fit:cover}
-.polaroid figcaption{font-family:var(--f-script);font-size:2.2rem;color:var(--espresso);text-align:center;padding:6px 0 10px;line-height:1.2}
-.polaroid.p-main{position:relative;z-index:2;transform:rotate(3deg)}
-.polaroid.p-back{position:absolute;z-index:1;width:62%;left:-12%;bottom:0;transform:rotate(-9deg)}
-.polaroid.p-back .ph{aspect-ratio:1}
-.polaroid-stack:hover .p-main{transform:rotate(1deg) translateY(-6px)}
-.polaroid-stack:hover .p-back{transform:rotate(-12deg) translateX(-10px)}
+.intro-phone{position:relative;justify-self:center;width:min(100%,330px);display:flex;flex-direction:column;align-items:center;gap:18px}
+.intro-phone .phone{transform:rotate(3deg)}
+.intro-phone .phone:hover,.intro-phone .phone.playing{transform:rotate(0) translateY(-8px)}
+.intro-phone::before{content:"";position:absolute;inset:6% -14% 14% -14%;border-radius:50%;background:var(--sage);opacity:.55;filter:blur(2px)}
+.intro-phone > *{position:relative}
+.intro{font-size:clamp(2.2rem,3.4vw,2.9rem);color:var(--butter);transform:rotate(-6deg);white-space:nowrap;margin-bottom:-4px}
+.intro-phone figcaption{color:color-mix(in srgb,var(--cream) 80%,transparent)}
 
 /* ---------- Marken ---------- */
 .brands{padding-block:clamp(64px,8vw,104px)}
@@ -188,6 +183,9 @@ section{padding-block:clamp(72px,10vw,128px)}
 .logo:hover .circ{transform:scale(1.06) rotate(-4deg)}
 .logo .circ img{width:100%;height:100%;object-fit:cover}
 .logo small{font-family:var(--f-head);font-weight:700;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+.names{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px 0;border-top:1px solid rgba(43,32,27,.14);padding-top:22px}
+.names li{font-family:var(--f-head);font-weight:900;font-style:italic;text-transform:uppercase;font-size:clamp(1rem,2vw,1.4rem);display:inline-flex;align-items:center}
+.names li + li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--flame);margin-inline:clamp(12px,2vw,22px)}
 
 /* ---------- Videos ---------- */
 .work{background:var(--taupe-d);color:var(--cream);text-align:center;position:relative;overflow:hidden}
@@ -221,6 +219,22 @@ section{padding-block:clamp(72px,10vw,128px)}
 .vid figcaption{font-family:var(--f-head);font-weight:800;font-style:italic;text-transform:uppercase;letter-spacing:.06em;font-size:.92rem}
 .vid figcaption small{display:block;font-family:var(--f-body);font-style:normal;font-weight:500;text-transform:none;letter-spacing:0;font-size:.86rem;color:color-mix(in srgb,var(--cream) 75%,transparent);margin-top:2px}
 .sound{margin-top:clamp(32px,5vw,48px);color:color-mix(in srgb,var(--cream) 75%,transparent)}
+.group{display:flex;align-items:center;gap:18px;margin-top:clamp(40px,6vw,64px);color:var(--butter)}
+.group::before,.group::after{content:"";flex:1;height:1px;background:color-mix(in srgb,var(--cream) 30%,transparent)}
+.group + .phones{margin-top:clamp(24px,4vw,40px)}
+.phones.four{gap:clamp(16px,2.6vw,36px)}
+.phones.four .vid{width:clamp(180px,20vw,240px)}
+
+/* ---------- B-Roll ---------- */
+.broll-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;margin-bottom:clamp(32px,5vw,56px)}
+.broll-head .script{font-size:clamp(2.6rem,5vw,3.6rem);color:var(--flame);display:block;margin-bottom:-6px}
+.broll-head .head{max-width:14ch}
+.clips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.clip{position:relative;aspect-ratio:9/14;border-radius:28px;overflow:hidden;background:var(--sand);box-shadow:var(--shadow-sm)}
+.clip:nth-child(2){transform:translateY(clamp(16px,3vw,40px))}
+.clip video{width:100%;height:100%;object-fit:cover}
+.clip figcaption{position:absolute;left:14px;bottom:14px;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-radius:999px;padding:.45em 1em;font-family:var(--f-head);font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase}
+.broll{padding-bottom:clamp(96px,12vw,150px)}
 
 /* ---------- Analytics ---------- */
 .stats-sec .top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;margin-bottom:clamp(32px,5vw,56px)}
@@ -236,7 +250,7 @@ section{padding-block:clamp(72px,10vw,128px)}
 .kpi:nth-child(2) small{color:#FFE6DC}
 .kpi .arrow{margin-left:auto;font-style:normal}
 
-.shots{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;align-items:end}
+.shots{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;align-items:end}
 .shot{border-radius:22px;overflow:hidden;box-shadow:var(--shadow-sm);background:var(--sand);aspect-ratio:3/4;transition:transform .4s cubic-bezier(.3,1.4,.5,1)}
 .shot img{width:100%;height:100%;object-fit:cover;object-position:center bottom}
 .shot:nth-child(odd){transform:translateY(18px)}
@@ -330,7 +344,13 @@ footer{padding-block:40px 56px}
   .shot:nth-child(odd){transform:none}
   .phones{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(var(--gutter) * -1);padding:20px var(--gutter) 10px;scrollbar-width:none;align-items:flex-start}
   .phones::-webkit-scrollbar{display:none}
-  .vid,.vid.mid{width:min(68vw,260px);scroll-snap-align:center}
+  .vid,.vid.mid,.phones.four .vid{width:min(68vw,260px);scroll-snap-align:center}
+  .clips{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(var(--gutter) * -1);padding:4px var(--gutter) 20px;scrollbar-width:none}
+  .clips::-webkit-scrollbar{display:none}
+  .clip{flex:0 0 min(62vw,260px);scroll-snap-align:center}
+  .clip:nth-child(2){transform:none}
+  .intro{white-space:normal;text-align:center}
+  .intro-phone{width:min(80%,290px)}
   .contact-side{order:-1}
   .contact-photo{width:min(60%,220px)}
 }
@@ -397,10 +417,10 @@ footer{padding-block:40px 56px}
         <a class="btn btn-line" href="#work">Videos ansehen</a>
       </div>
       <ul class="stats rv d3">
-        <li><b>8,2 Mio.</b><small>Top View Instagram</small></li>
+        <li><b>8,4 Mio.</b><small>Top View Instagram</small></li>
         <li><b>1,2 Mio.</b><small>Top View TikTok</small></li>
-        <li><a href="https://www.instagram.com/joanna_kleemann" target="_blank" rel="noopener"><b>5,6k</b><small>Follower Instagram ↗</small></a></li>
-        <li><a href="https://www.tiktok.com/@joanna_kleemann" target="_blank" rel="noopener"><b>6k</b><small>Follower TikTok ↗</small></a></li>
+        <li><a href="https://www.instagram.com/joanna_kleemann" target="_blank" rel="noopener"><b>6.652</b><small>Follower Instagram ↗</small></a></li>
+        <li><a href="https://www.tiktok.com/@joanna_kleemann" target="_blank" rel="noopener"><b>6.168</b><small>Follower TikTok ↗</small></a></li>
       </ul>
     </div>
 
@@ -408,8 +428,8 @@ footer{padding-block:40px 56px}
       <div class="blob" aria-hidden="true"></div>
       <div class="portrait"><img src="img/hero.jpg" alt="Joanna Kleemann lächelt in die Kamera und hält ein Produkt" fetchpriority="high"></div>
       <div class="float f1" aria-hidden="true">
-        <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
-        <span><b>8,2 Mio.</b><small>Views · Top Reel</small></span>
+        <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        <span><b>8,4 Mio.</b><small>Views · Top Reel</small></span>
       </div>
       <div class="float f2" aria-hidden="true">
         <span class="dot"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg></span>
@@ -442,12 +462,13 @@ footer{padding-block:40px 56px}
           <li class="fact rv d2"><b>Bühne &amp; Kamera</b><span>Content Creatorin &amp; selbstständige Tänzerin seit 2025, mit Bühnenerfahrung</span></li>
           <li class="fact rv d3"><b>DE · EN · ES</b><span>Deutsch (Muttersprache), Englisch (fließend), Spanisch (A1, ich lerne!)</span></li>
         </ul>
-        <p class="intro script rv d3">Let me introduce myself</p>
       </div>
-      <div class="polaroid-stack rv d2">
-        <figure class="polaroid p-back"><div class="ph"><img src="img/pole-1.jpg" alt="Pole-Dance am Hafen bei Sonnenuntergang" loading="lazy"></div><figcaption>dance</figcaption></figure>
-        <figure class="polaroid p-main"><div class="ph"><img src="img/cta.jpg" alt="Joanna mit einem bunten Blumenstrauß" loading="lazy"></div><figcaption>that’s me ♡</figcaption></figure>
-      </div>
+      <figure class="intro-phone rv d2">
+        <p class="intro script" aria-hidden="true">Let me introduce myself</p>
+        <div class="phone"><div class="screen"><video src="video/intro.mp4" poster="img/vid-intro.jpg" preload="none" playsinline aria-label="Vorstellungsvideo von Joanna"></video></div>
+          <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
+        <figcaption class="label">Mein Vorstellungsvideo · mit Ton</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -457,12 +478,15 @@ footer{padding-block:40px 56px}
         <div class="brands-copy">
           <span class="tag">Kooperationen</span>
           <h2 class="head">Marken, mit denen ich gearbeitet habe</h2>
-          <p class="lead">Von Haarpflege bis Accessoires – Content, der zur Marke passt und trotzdem nach mir klingt.</p>
+          <p class="lead">Von TV über Fintech bis Haarpflege – Content, der zur Marke passt und trotzdem nach mir klingt.</p>
         </div>
         <div class="logos">
           <div class="logo"><div class="circ"><img src="img/logo-haaranker.png" alt="Haar-Anker" loading="lazy"></div><small>Laufende Koop</small></div>
           <div class="logo"><div class="circ"><img src="img/logo-cabaia.png" alt="CABAIA" loading="lazy"></div><small>Kooperation</small></div>
         </div>
+        <ul class="names">
+          <li>RTL ZWEI</li><li>Nickel</li><li>Yubo</li><li>HaarAnker</li><li>CABAIA</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -471,6 +495,30 @@ footer{padding-block:40px 56px}
     <div class="wrap">
       <h2 class="head rv">See my work</h2>
       <p class="sub script rv d1">meine bisherigen Videos</p>
+      <h3 class="group label rv"><span>Kooperationen</span></h3>
+      <div class="phones four">
+        <figure class="vid rv">
+          <div class="phone"><div class="screen"><video src="video/rtl2.mp4" poster="img/vid-rtl2.jpg" preload="none" playsinline loop aria-label="Kooperationsvideo für RTL ZWEI"></video></div>
+            <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
+          <figcaption>RTL ZWEI<small>Kooperation · Storytime</small></figcaption>
+        </figure>
+        <figure class="vid rv d1">
+          <div class="phone"><div class="screen"><video src="video/nickel.mp4" poster="img/vid-nickel.jpg" preload="none" playsinline loop aria-label="Kooperationsvideo für Nickel"></video></div>
+            <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
+          <figcaption>Nickel<small>Kooperation · Finanzen</small></figcaption>
+        </figure>
+        <figure class="vid rv d2">
+          <div class="phone"><div class="screen"><video src="video/yubo.mp4" poster="img/vid-yubo.jpg" preload="none" playsinline loop aria-label="Kooperationsvideo für Yubo"></video></div>
+            <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
+          <figcaption>Yubo<small>Kooperation · Sketch</small></figcaption>
+        </figure>
+        <figure class="vid rv d3">
+          <div class="phone"><div class="screen"><video src="video/yubo2.mp4" poster="img/vid-yubo2.jpg" preload="none" playsinline loop aria-label="Zweites Kooperationsvideo für Yubo"></video></div>
+            <button class="play" type="button" aria-label="Video abspielen"><svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" fill="#2B201B"/></svg><svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2h4v16H4zM12 2h4v16h-4z" fill="#2B201B"/></svg></button></div>
+          <figcaption>Yubo<small>Kooperation · POV</small></figcaption>
+        </figure>
+      </div>
+      <h3 class="group label rv"><span>UGC</span></h3>
       <div class="phones">
         <figure class="vid rv d1">
           <div class="phone"><div class="screen"><video src="video/pickel.mp4" poster="img/vid-pickel.jpg" preload="none" playsinline loop aria-label="Vorher-Nachher-Video: Mein Geheimnis gegen Pickel"></video></div>
@@ -492,6 +540,23 @@ footer{padding-block:40px 56px}
     </div>
   </section>
 
+  <section class="broll" id="broll">
+    <div class="wrap">
+      <div class="broll-head">
+        <div class="rv">
+          <span class="script">B-Roll</span>
+          <h2 class="head">Produkt&shy;aufnahmen, die Lust machen</h2>
+        </div>
+        <p class="lead rv d1">Ästhetische Close-ups und Detail-Shots für Ads, Landingpages und Social – ganz ohne Gesicht oder mit.</p>
+      </div>
+      <div class="clips">
+        <figure class="clip rv"><video src="video/broll-parfum.mp4" poster="img/vid-broll-parfum.jpg" muted loop playsinline preload="none" aria-label="B-Roll: Parfüm"></video><figcaption>Beauty · Parfüm</figcaption></figure>
+        <figure class="clip rv d1"><video src="video/broll-magnesium.mp4" poster="img/vid-broll-magnesium.jpg" muted loop playsinline preload="none" aria-label="B-Roll: Nahrungsergänzung Close-up"></video><figcaption>Supplements · Close-up</figcaption></figure>
+        <figure class="clip rv d2"><video src="video/broll-glas.mp4" poster="img/vid-broll-glas.jpg" muted loop playsinline preload="none" aria-label="B-Roll: Glas wird befüllt"></video><figcaption>Home · Lifestyle</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
   <section class="stats-sec" id="analytics">
     <div class="wrap">
       <div class="top">
@@ -502,17 +567,18 @@ footer{padding-block:40px 56px}
         <p class="lead rv d1">Echte Reichweite aus organischem Content – hier ein paar meiner erfolgreichsten Reels.</p>
       </div>
       <div class="kpis">
-        <div class="kpi rv"><b>8,2 Mio.</b><small>Instagram Top View</small></div>
+        <div class="kpi rv"><b>8,4 Mio.</b><small>Instagram Top View</small></div>
         <div class="kpi rv d1"><b>1,2 Mio.</b><small>TikTok Top View</small></div>
-        <a class="kpi rv d2" href="https://www.instagram.com/joanna_kleemann" target="_blank" rel="noopener"><b>5,6k</b><small>Follower Instagram ↗</small></a>
-        <a class="kpi rv d3" href="https://www.tiktok.com/@joanna_kleemann" target="_blank" rel="noopener"><b>6k</b><small>Follower TikTok ↗</small></a>
+        <a class="kpi rv d2" href="https://www.instagram.com/joanna_kleemann" target="_blank" rel="noopener"><b>6.652</b><small>Follower Instagram ↗</small></a>
+        <a class="kpi rv d3" href="https://www.tiktok.com/@joanna_kleemann" target="_blank" rel="noopener"><b>6.168</b><small>Follower TikTok ↗</small></a>
       </div>
       <div class="shots" tabindex="0" aria-label="Analytics-Screenshots">
-        <div class="shot rv"><img src="img/shot-6mio.jpg" alt="Reel mit 6 Mio. Views" loading="lazy"></div>
+        <div class="shot rv"><img src="img/shot-8-4mio.jpg" alt="Reel mit 8,4 Mio. Views" loading="lazy"></div>
         <div class="shot rv d1"><img src="img/shot-1-8mio.jpg" alt="Reel mit 1,8 Mio. Views" loading="lazy"></div>
         <div class="shot rv d1"><img src="img/shot-689k.jpg" alt="Reel mit 689 Tsd. Views" loading="lazy"></div>
+        <div class="shot rv d2"><img src="img/shot-325k.jpg" alt="Reel mit 325 Tsd. Views" loading="lazy"></div>
         <div class="shot rv d2"><img src="img/shot-162k.jpg" alt="Reel mit 162 Tsd. Views" loading="lazy"></div>
-        <div class="shot rv d3"><img src="img/shot-25k.jpg" alt="Reel mit 25,5 Tsd. Views" loading="lazy"></div>
+        <div class="shot rv d3"><img src="img/shot-78k.jpg" alt="Reel mit 78,3 Tsd. Views" loading="lazy"></div>
       </div>
     </div>
   </section>
@@ -567,8 +633,8 @@ footer{padding-block:40px 56px}
           </div>
           <div class="contact-links">
             <a class="chip" href="mailto:contact@joannakleemann.de"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>Mail öffnen</a>
-            <a class="chip" href="https://www.instagram.com/joanna_kleemann" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram <small>5,6k</small></a>
-            <a class="chip" href="https://www.tiktok.com/@joanna_kleemann" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>TikTok <small>6k</small></a>
+            <a class="chip" href="https://www.instagram.com/joanna_kleemann" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram <small>6.652</small></a>
+            <a class="chip" href="https://www.tiktok.com/@joanna_kleemann" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>TikTok <small>6.168</small></a>
           </div>
           <span class="tag express">⚡ 24–72h Express-Lieferung möglich</span>
         </div>
@@ -640,6 +706,15 @@ footer{padding-block:40px 56px}
     v.addEventListener('play', () => { ph.classList.add('playing'); b.setAttribute('aria-label','Video pausieren'); });
     v.addEventListener('pause', () => { ph.classList.remove('playing'); b.setAttribute('aria-label','Video abspielen'); });
   });
+
+  /* B-Roll: stumm abspielen, solange sichtbar */
+  const clips = document.querySelectorAll('.clip video');
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    const cio = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.muted = true; e.target.play().catch(() => {}); } else e.target.pause();
+    }), {threshold:.25});
+    clips.forEach(v => cio.observe(v));
+  }
 })();
 </script>
 </body></html>
