@@ -196,7 +196,8 @@ section{padding-block:clamp(72px,10vw,128px)}
 
 
 /* ---------- Ablauf ---------- */
-.process{padding-bottom:0}
+.process{padding-bottom:0;padding-top:clamp(40px,5vw,64px)}
+.stats-sec{padding-bottom:clamp(24px,3vw,40px)}
 .process-head{display:flex;flex-direction:column;gap:16px;margin-bottom:clamp(32px,5vw,56px)}
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:0;padding:0;list-style:none}
 .step{position:relative;background:var(--paper);border-radius:26px;padding:26px 24px 28px;display:flex;flex-direction:column;gap:10px;overflow:hidden;transition:transform .3s,box-shadow .3s}
