@@ -18,9 +18,72 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=Sacramento&family=Montserrat:ital,wght@0,500;0,700;0,800;1,800;1,900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="preload" as="image" href="img/hero.jpg" fetchpriority="high">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Person",
+   "@id": "https://joannakleemann.de/#person",
+   "name": "Joanna Kleemann",
+   "url": "https://joannakleemann.de/",
+   "image": "https://joannakleemann.de/img/hero.jpg",
+   "jobTitle": "UGC-Creatorin und Influencerin",
+   "description": "UGC-Creatorin und Influencerin aus Leipzig – authentischer Content mit echtem Storytelling für Marken.",
+   "email": "mailto:contact@joannakleemann.de",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Leipzig",
+    "addressCountry": "DE"
+   },
+   "knowsLanguage": [
+    "de",
+    "en",
+    "es"
+   ],
+   "knowsAbout": [
+    "User Generated Content",
+    "UGC-Videos",
+    "Social Media Content",
+    "Storytelling",
+    "Instagram Reels",
+    "TikTok",
+    "Produktvideos",
+    "B-Roll"
+   ],
+   "sameAs": [
+    "https://www.instagram.com/joanna_kleemann",
+    "https://www.tiktok.com/@joanna_kleemann"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://joannakleemann.de/#website",
+   "url": "https://joannakleemann.de/",
+   "name": "Joanna Kleemann",
+   "inLanguage": "de-DE",
+   "publisher": {
+    "@id": "https://joannakleemann.de/#person"
+   }
+  },
+  {
+   "@type": "ProfilePage",
+   "@id": "https://joannakleemann.de/#profile",
+   "url": "https://joannakleemann.de/",
+   "name": "Joanna Kleemann · UGC-Creatorin & Influencerin aus Leipzig",
+   "inLanguage": "de-DE",
+   "isPartOf": {
+    "@id": "https://joannakleemann.de/#website"
+   },
+   "mainEntity": {
+    "@id": "https://joannakleemann.de/#person"
+   }
+  }
+ ]
+}
+</script>
 <style>
 /* Editorial-warm: Creme, Taupe, Salbei und Butter wie ein Moodboard –
    Joannas Haarfarbe (Flamme) ist der einzige laute Akzent. */
@@ -56,6 +119,7 @@
 html{scroll-behavior:smooth;overflow-x:clip}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
 img,video{display:block;max-width:100%}
+img{height:auto}
 h1,h2,h3,p,figure{margin:0}
 ul{margin:0;padding:0;list-style:none}
 a{color:inherit}
@@ -481,7 +545,7 @@ footer{padding-block:40px 56px}
 
     <div class="hero-visual rv d1">
       <div class="blob" aria-hidden="true"></div>
-      <div class="portrait"><img src="img/hero.jpg" alt="Joanna Kleemann lächelt in die Kamera und hält ein Produkt" fetchpriority="high"></div>
+      <div class="portrait"><img width="1000" height="1334" src="img/hero.jpg" alt="Joanna Kleemann lächelt in die Kamera und hält ein Produkt" fetchpriority="high"></div>
       <div class="ring" aria-hidden="true">
         <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-47 0a47 47 0 1 1 94 0a47 47 0 1 1-94 0"/></defs>
           <text><textPath href="#circ">UGC-CREATORIN • INFLUENCERIN • LEIPZIG • </textPath></text></svg>
@@ -520,11 +584,11 @@ footer{padding-block:40px 56px}
           <h2 class="head">Marken, mit denen ich gearbeitet habe</h2>
         </div>
         <div class="logos">
-          <div class="logo"><div class="circ"><img src="img/logo-haaranker.png" alt="Haar-Anker" loading="lazy"></div></div>
-          <div class="logo"><div class="circ"><img src="img/logo-cabaia.png" alt="CABAIA" loading="lazy"></div></div>
-          <div class="logo"><div class="circ"><img src="img/logo-rtl2.png" alt="RTL ZWEI" loading="lazy"></div></div>
-          <div class="logo"><div class="circ"><img src="img/logo-nickel.png" alt="Nickel" loading="lazy"></div></div>
-          <div class="logo"><div class="circ"><img src="img/logo-yubo.png" alt="Yubo" loading="lazy"></div></div>
+          <div class="logo"><div class="circ"><img width="300" height="300" src="img/logo-haaranker.png" alt="Haar-Anker" loading="lazy"></div></div>
+          <div class="logo"><div class="circ"><img width="300" height="300" src="img/logo-cabaia.png" alt="CABAIA" loading="lazy"></div></div>
+          <div class="logo"><div class="circ"><img width="600" height="600" src="img/logo-rtl2.png" alt="RTL ZWEI" loading="lazy"></div></div>
+          <div class="logo"><div class="circ"><img width="600" height="600" src="img/logo-nickel.png" alt="Nickel" loading="lazy"></div></div>
+          <div class="logo"><div class="circ"><img width="600" height="600" src="img/logo-yubo.png" alt="Yubo" loading="lazy"></div></div>
         </div>
         <p class="more-text">… und viele mehr</p>
       </div>
@@ -611,19 +675,19 @@ footer{padding-block:40px 56px}
         <a class="kpi rv d3" href="https://www.tiktok.com/@joanna_kleemann" target="_blank" rel="noopener"><b>6.168</b><small>Follower TikTok ↗</small></a>
       </div>
       <div class="shots" tabindex="0" aria-label="Analytics-Screenshots">
-        <div class="shot rv"><img src="img/shot-8-4mio.jpg" alt="Reel mit 8,4 Mio. Views" loading="lazy"></div>
-        <div class="shot rv d1"><img src="img/shot-1-8mio.jpg" alt="Reel mit 1,8 Mio. Views" loading="lazy"></div>
-        <div class="shot rv d1"><img src="img/shot-689k.jpg" alt="Reel mit 689 Tsd. Views" loading="lazy"></div>
+        <div class="shot rv"><img width="405" height="612" src="img/shot-8-4mio.jpg" alt="Reel mit 8,4 Mio. Views" loading="lazy"></div>
+        <div class="shot rv d1"><img width="395" height="547" src="img/shot-1-8mio.jpg" alt="Reel mit 1,8 Mio. Views" loading="lazy"></div>
+        <div class="shot rv d1"><img width="398" height="476" src="img/shot-689k.jpg" alt="Reel mit 689 Tsd. Views" loading="lazy"></div>
       </div>
       <h3 class="ins-label rv">Video-Insights</h3>
       <div class="ins-cards">
-        <figure class="ins-card rv"><img src="img/ins-a-header.jpg" alt="Video mit 254 Tsd. Aufrufen und 7.111 Likes" loading="lazy"><img src="img/ins-a-overview.jpg" alt="Insights: 254.107 Aufrufe, 155.089 Betrachter, 62 neue Follower" loading="lazy"></figure>
-        <figure class="ins-card rv d1"><img src="img/ins-b-overview.jpg" alt="Insights: 25.243 Aufrufe, 17.736 Betrachter, 7 Sekunden durchschnittliche Wiedergabe" loading="lazy"></figure>
-        <figure class="ins-card rv d2"><img src="img/ins-c-overview.jpg" alt="Insights: 20.175 Aufrufe, 16.824 Betrachter, 35 Sekunden durchschnittliche Wiedergabe, 59 neue Follower" loading="lazy"></figure>
+        <figure class="ins-card rv"><img width="1206" height="265" src="img/ins-a-header.jpg" alt="Video mit 254 Tsd. Aufrufen und 7.111 Likes" loading="lazy"><img width="1206" height="1071" src="img/ins-a-overview.jpg" alt="Insights: 254.107 Aufrufe, 155.089 Betrachter, 62 neue Follower" loading="lazy"></figure>
+        <figure class="ins-card rv d1"><img width="1206" height="571" src="img/ins-b-overview.jpg" alt="Insights: 25.243 Aufrufe, 17.736 Betrachter, 7 Sekunden durchschnittliche Wiedergabe" loading="lazy"></figure>
+        <figure class="ins-card rv d2"><img width="1206" height="596" src="img/ins-c-overview.jpg" alt="Insights: 20.175 Aufrufe, 16.824 Betrachter, 35 Sekunden durchschnittliche Wiedergabe, 59 neue Follower" loading="lazy"></figure>
       </div>
       <div class="ins-eng">
-        <figure class="ins-card rv"><img src="img/ins-eng-2.jpg" alt="Interaktionen: 116 Tsd. Likes, 516 Kommentare, 961 Reposts, 6,2 Tsd. Speicherungen" loading="lazy"></figure>
-        <figure class="ins-card rv d1"><img src="img/ins-eng-1.jpg" alt="Interaktionen: 2,4 Tsd. Likes, 60 Kommentare, 27 Reposts, 1,5 Tsd. Speicherungen" loading="lazy"></figure>
+        <figure class="ins-card rv"><img width="1206" height="219" src="img/ins-eng-2.jpg" alt="Interaktionen: 116 Tsd. Likes, 516 Kommentare, 961 Reposts, 6,2 Tsd. Speicherungen" loading="lazy"></figure>
+        <figure class="ins-card rv d1"><img width="1206" height="238" src="img/ins-eng-1.jpg" alt="Interaktionen: 2,4 Tsd. Likes, 60 Kommentare, 27 Reposts, 1,5 Tsd. Speicherungen" loading="lazy"></figure>
       </div>
     </div>
   </section>
@@ -677,7 +741,7 @@ footer{padding-block:40px 56px}
           </div>
         </div>
         <div class="contact-side">
-          <div class="contact-photo"><img src="img/contact.jpg" alt="Joanna lacht in die Kamera" loading="lazy"></div>
+          <div class="contact-photo"><img width="1500" height="2000" src="img/contact.jpg" alt="Joanna lacht in die Kamera" loading="lazy"></div>
           <p class="sig" aria-hidden="true">– Joanna</p>
         </div>
       </div>
