@@ -183,10 +183,13 @@ section{padding-block:clamp(72px,10vw,128px)}
 .brands-box{display:grid;grid-template-columns:1fr;gap:clamp(28px,5vw,64px);align-items:center;background:var(--paper);border-radius:36px;padding:clamp(28px,5vw,60px);box-shadow:0 1px 0 rgba(43,32,27,.06)}
 .brands-copy{display:flex;flex-direction:column;gap:16px;align-items:flex-start;min-width:0}
 .brands .head{font-size:clamp(1.8rem,3.8vw,2.9rem)}
-.logos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(14px,2.4vw,32px)}
+.logos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(14px,2.4vw,32px)}
 .logo{display:flex;flex-direction:column;align-items:center;gap:12px}
 .logo .circ{background:#fff;width:min(100%,170px);aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .35s cubic-bezier(.3,1.5,.5,1)}
 .logo:hover .circ{transform:scale(1.06) rotate(-4deg)}
+.logo.more .circ{background:var(--flame);display:grid;place-items:center;text-align:center;box-shadow:none}
+.logo.more span{font-family:var(--f-serif);font-style:italic;font-weight:600;font-size:clamp(1.05rem,1.8vw,1.45rem);line-height:1.1;color:#fff}
+.langs-list{display:flex!important;flex-direction:column;gap:2px}
 .logo .circ img{width:100%;height:100%;object-fit:cover}
 .logo small{font-family:var(--f-head);font-weight:700;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
 
@@ -311,27 +314,27 @@ section{padding-block:clamp(72px,10vw,128px)}
 /* ---------- Kontakt ---------- */
 .contact{padding-top:0}
 .contact-box{
-  position:relative;overflow:hidden;background:var(--espresso);color:var(--cream);border-radius:40px;
-  padding:clamp(32px,6vw,80px);display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(32px,5vw,72px);align-items:center;
+  position:relative;background:linear-gradient(160deg,#FCE8DC 0%,#F8D6C3 100%);color:var(--espresso);border-radius:40px;
+  padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center;
 }
-.contact-box::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--flame);opacity:.55;filter:blur(40px);right:-140px;top:-160px}
 .contact-copy{position:relative;display:flex;flex-direction:column;gap:24px;min-width:0}
-.contact-copy .script{font-size:clamp(3rem,6vw,4.6rem);color:var(--butter);transform:rotate(-4deg);transform-origin:left;margin-bottom:-12px}
+.contact-copy .script{font-size:clamp(3rem,6vw,4.6rem);color:var(--flame);transform:rotate(-4deg);transform-origin:left;margin-bottom:-12px}
 .contact .head{font-size:clamp(2rem,4.8vw,3.8rem)}
 .contact .head span{color:var(--flame)}
 .mailbox{display:flex;align-items:center;background:var(--paper);color:var(--ink);border-radius:999px;padding:6px;max-width:100%;width:fit-content;gap:6px}
 .mailbox .mail{padding:0 14px 0 18px;font-weight:700;user-select:all;min-width:0;overflow-wrap:anywhere}
-.mailbox .btn{padding:.95em 1.4em}
+.mailbox .btn{padding:.95em 1.4em;white-space:nowrap}
+.contact .mailbox .mail{white-space:nowrap;overflow-wrap:normal}
 .contact-links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.chip{display:inline-flex;align-items:center;gap:.55em;border-radius:999px;padding:.6em 1.1em;text-decoration:none;font-weight:700;box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--cream) 40%,transparent);transition:background .25s,color .25s}
+.chip{display:inline-flex;align-items:center;gap:.55em;border-radius:999px;padding:.6em 1.1em;text-decoration:none;font-weight:700;box-shadow:inset 0 0 0 1.5px var(--espresso);transition:background .25s,color .25s,box-shadow .25s}
 .chip svg{width:18px;height:18px}
-.chip:hover{background:var(--cream);color:var(--espresso)}
+.chip:hover{background:var(--espresso);color:var(--cream)}
 .chip small{font-weight:500;opacity:.7}
 .express{display:inline-flex;align-self:flex-start;gap:.5em;align-items:center}
-.contact-side{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px}
-.contact-photo{width:min(100%,380px);aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:0 0 0 10px color-mix(in srgb,var(--cream) 10%,transparent)}
+.contact-side{position:relative;min-width:0}
+.contact-photo{width:100%;aspect-ratio:3/4;border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
 .contact-photo img{width:100%;height:100%;object-fit:cover}
-.sig{font-family:var(--f-script);font-size:3rem;color:var(--butter);transform:rotate(-6deg)}
+.sig{position:absolute;left:-6%;bottom:6%;font-family:var(--f-script);font-size:clamp(2.6rem,4vw,3.4rem);line-height:1;color:var(--flame);background:var(--paper);padding:.15em .45em .1em;border-radius:14px;transform:rotate(-6deg);box-shadow:var(--shadow-sm)}
 
 footer{padding-block:40px 56px}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;color:var(--ink-soft)}
@@ -386,7 +389,8 @@ footer{padding-block:40px 56px}
   .intro{white-space:normal;text-align:center}
   .intro-phone{width:min(80%,290px)}
   .contact-side{order:-1}
-  .contact-photo{width:min(60%,220px)}
+  .contact-photo{width:100%;aspect-ratio:4/5}
+  .sig{left:4%}
 }
 @media (max-width:600px){
   body{font-size:16px}
@@ -425,7 +429,7 @@ footer{padding-block:40px 56px}
 
 <div class="testbar" role="region" aria-label="Testansicht">
   <b>TEST</b><span>Nur zum Vergleichen – nicht Teil der Website</span>
-  <nav><a href="index.html" aria-current="page">Variante 1</a><a href="v2.html">Variante 2</a></nav>
+  <nav><a href="index.html" aria-current="page">Variante 1 · neu</a><a href="v2.html">Variante 2 · vorher</a></nav>
 </div>
 <nav class="nav" aria-label="Hauptnavigation">
   <div class="wrap nav-in">
@@ -452,30 +456,16 @@ footer{padding-block:40px 56px}
       <svg class="swash rv d2" viewBox="0 0 440 24" fill="none" aria-hidden="true"><path d="M4 16C80 6 170 4 250 8s120 6 186-2" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
       <p class="role rv d2"><span class="label">UGC-Creatorin</span><i></i><span class="label">Influencerin</span><i></i><span class="label">Leipzig</span></p>
       <p class="lead rv d2">UGC, der die Aufmerksamkeit hält: authentisch, mit echtem Storytelling und ganz viel Energie. Damit deine Marke nicht weggescrollt wird.</p>
-      <p class="langs rv d2"><span>Deutsch &amp; Englisch</span><span>Express 24–72h</span><span>Organic &amp; Paid</span></p>
+      <p class="langs rv d2"><span>Deutsch &amp; Englisch</span></p>
       <div class="cta-row rv d3">
         <a class="btn btn-fill" href="#kontakt">Let’s work together <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-line" href="#work">Videos ansehen</a>
       </div>
-      <ul class="stats rv d3">
-        <li><b>8,4 Mio.</b><small>Top View Instagram</small></li>
-        <li><b>1,2 Mio.</b><small>Top View TikTok</small></li>
-        <li><a href="https://www.instagram.com/joanna_kleemann" target="_blank" rel="noopener"><b>6.652</b><small>Follower Instagram ↗</small></a></li>
-        <li><a href="https://www.tiktok.com/@joanna_kleemann" target="_blank" rel="noopener"><b>6.168</b><small>Follower TikTok ↗</small></a></li>
-      </ul>
     </div>
 
     <div class="hero-visual rv d1">
       <div class="blob" aria-hidden="true"></div>
       <div class="portrait"><img src="img/hero.jpg" alt="Joanna Kleemann lächelt in die Kamera und hält ein Produkt" fetchpriority="high"></div>
-      <div class="float f1" aria-hidden="true">
-        <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></span>
-        <span><b>8,4 Mio.</b><small>Views · Top Reel</small></span>
-      </div>
-      <div class="float f2" aria-hidden="true">
-        <span class="dot"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg></span>
-        <span><b>1,2 Mio.</b><small>Views · TikTok</small></span>
-      </div>
       <div class="ring" aria-hidden="true">
         <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-47 0a47 47 0 1 1 94 0a47 47 0 1 1-94 0"/></defs>
           <text><textPath href="#circ">UGC-CREATORIN • INFLUENCERIN • LEIPZIG • </textPath></text></svg>
@@ -494,7 +484,7 @@ footer{padding-block:40px 56px}
         <p class="rv d1">UGC-Creatorin, Influencerin und selbstständige Tänzerin aus Leipzig. Ich bin eine <strong>sehr gute Storytellerin</strong> und bringe Produkte so rüber, wie man sie einer Freundin empfehlen würde – ehrlich, nahbar und mit Persönlichkeit.</p>
         <ul class="facts">
           <li class="fact rv d2"><b>Bühne &amp; Kamera</b><span>Content Creatorin &amp; selbstständige Tänzerin seit 2025, mit Bühnenerfahrung</span></li>
-          <li class="fact rv d3"><b>DE · EN · ES</b><span>Deutsch (Muttersprache), Englisch (fließend), Spanisch (A2, ich lerne weiter!)</span></li>
+          <li class="fact rv d3"><b>DE · EN · ES</b><span class="langs-list"><span>Deutsch – Muttersprache</span><span>Englisch – fließend</span><span>Spanisch – A2</span></span></li>
         </ul>
       </div>
       <figure class="intro-phone rv d2">
@@ -519,6 +509,7 @@ footer{padding-block:40px 56px}
           <div class="logo"><div class="circ"><img src="img/logo-rtl2.png" alt="RTL ZWEI" loading="lazy"></div></div>
           <div class="logo"><div class="circ"><img src="img/logo-nickel.png" alt="Nickel" loading="lazy"></div></div>
           <div class="logo"><div class="circ"><img src="img/logo-yubo.png" alt="Yubo" loading="lazy"></div></div>
+          <div class="logo more"><div class="circ"><span>&amp; viele<br>mehr</span></div></div>
         </div>
       </div>
     </div>
@@ -614,27 +605,6 @@ footer{padding-block:40px 56px}
     </div>
   </section>
 
-  <section class="special" id="specials">
-    <div class="wrap special-grid">
-      <div class="collage rv">
-        <div class="c c-main"><img src="img/special-main.jpg" alt="Joanna zeigt ihre Rückenmuskulatur" loading="lazy"></div>
-        <div class="c c-s"><img src="img/pole-1.jpg" alt="Pole-Dance am Hafen bei Sonnenuntergang" loading="lazy"></div>
-        <div class="c c-s"><img src="img/pole-2.jpg" alt="Pole-Dance am Wasser" loading="lazy"></div>
-        <div class="c c-s"><img src="img/pole-3.jpg" alt="Pole-Dance unter blauem Himmel" loading="lazy"></div>
-      </div>
-      <div class="special-copy">
-        <span class="tag rv" style="align-self:flex-start">Meine Specials</span>
-        <p class="script rv d1">Sports-Maus</p>
-        <p class="big rv d1">Ich bin eine richtige <em>Sports-Maus</em> und habe sehr viel Ahnung auf dem Gebiet.</p>
-        <p class="rv d2">Wenn du Bock hast, mit mir zusammenzuarbeiten, kannst du dich darauf verlassen, dass …</p>
-        <ul class="checks">
-          <li class="rv d2"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#E4572E"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>ich Expertise in der Fitness-Nische biete</li>
-          <li class="rv d3"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#2B201B"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#F3D98A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>ich offen für langfristige Kooperationen bin</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
   <section class="process" id="ablauf">
     <div class="wrap">
       <div class="process-head">
@@ -644,8 +614,8 @@ footer{padding-block:40px 56px}
       <ol class="steps">
         <li class="step rv"><span class="no">01</span><h3>Briefing</h3><p>Du erzählst mir von Produkt, Zielgruppe und Ziel – Awareness, Conversion oder Community.</p></li>
         <li class="step rv d1"><span class="no">02</span><h3>Skript &amp; Hooks</h3><p>Ich entwickle Konzept, Storyline und mehrere Hook-Ideen, die zum Weiterschauen bringen.</p></li>
-        <li class="step rv d2"><span class="no">03</span><h3>Dreh &amp; Schnitt</h3><p>Authentisch gefilmt, sauber geschnitten – auf Wunsch mit Untertiteln und On-Screen Text.</p></li>
-        <li class="step rv d3"><span class="no">04</span><h3>Lieferung</h3><p>Fertige Videos im gewünschten Format, auf Wunsch als Express-Lieferung in 24–72h.</p></li>
+        <li class="step rv d2"><span class="no">03</span><h3>Dreh &amp; Schnitt</h3><p>Authentisch gefilmt und sauber geschnitten.</p></li>
+        <li class="step rv d3"><span class="no">04</span><h3>Lieferung</h3><p>Fertige Videos im gewünschten Format – ready to post.</p></li>
       </ol>
     </div>
   </section>
@@ -679,14 +649,13 @@ footer{padding-block:40px 56px}
           </div>
           <div class="contact-links">
             <a class="chip" href="mailto:contact@joannakleemann.de"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>Mail öffnen</a>
-            <a class="chip" href="https://www.instagram.com/joanna_kleemann" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram <small>6.652</small></a>
-            <a class="chip" href="https://www.tiktok.com/@joanna_kleemann" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>TikTok <small>6.168</small></a>
+            <a class="chip" href="https://www.instagram.com/joanna_kleemann" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a>
+            <a class="chip" href="https://www.tiktok.com/@joanna_kleemann" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>TikTok</a>
           </div>
-          <span class="tag express">⚡ 24–72h Express-Lieferung möglich</span>
         </div>
         <div class="contact-side">
           <div class="contact-photo"><img src="img/cta.jpg" alt="Joanna mit einem bunten Blumenstrauß" loading="lazy"></div>
-          <p class="sig">– Joanna</p>
+          <p class="sig" aria-hidden="true">– Joanna</p>
         </div>
       </div>
     </div>
