@@ -183,10 +183,11 @@ section{padding-block:clamp(72px,10vw,128px)}
 .brands-box{display:grid;grid-template-columns:1fr;gap:clamp(28px,5vw,64px);align-items:center;background:var(--paper);border-radius:36px;padding:clamp(28px,5vw,60px);box-shadow:0 1px 0 rgba(43,32,27,.06)}
 .brands-copy{display:flex;flex-direction:column;gap:16px;align-items:flex-start;min-width:0}
 .brands .head{font-size:clamp(1.8rem,3.8vw,2.9rem)}
-.logos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(14px,2.4vw,32px)}
+.logos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(14px,2.4vw,32px)}
 .logo{display:flex;flex-direction:column;align-items:center;gap:12px}
 .logo .circ{background:#fff;width:min(100%,170px);aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .35s cubic-bezier(.3,1.5,.5,1)}
 .logo:hover .circ{transform:scale(1.06) rotate(-4deg)}
+.more-text{font-family:var(--f-serif);font-style:italic;font-weight:500;font-size:clamp(1.8rem,3.8vw,2.9rem);line-height:1.1;color:var(--flame);justify-self:end;margin-top:-6px}
 .logo.more .circ{background:var(--flame);display:grid;place-items:center;text-align:center;box-shadow:none}
 .logo.more span{font-family:var(--f-serif);font-style:italic;font-weight:600;font-size:clamp(1.05rem,1.8vw,1.45rem);line-height:1.1;color:#fff}
 .langs-list{display:flex!important;flex-direction:column;gap:2px}
@@ -276,6 +277,13 @@ section{padding-block:clamp(72px,10vw,128px)}
 .shot:nth-child(3n+2){transform:translateY(36px)}
 .shot:hover{transform:translateY(-6px) scale(1.03)}
 
+.ins-label{display:flex;align-items:center;gap:18px;margin:clamp(56px,7vw,88px) 0 clamp(20px,3vw,32px);font-family:var(--f-serif);font-style:italic;font-weight:500;font-size:clamp(1.6rem,3vw,2.3rem)}
+.ins-label::after{content:"";flex:1;height:1px;background:rgba(43,32,27,.18)}
+.ins-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px);align-items:start}
+.ins-eng{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2vw,24px);margin-top:clamp(14px,2vw,24px)}
+.ins-card{background:#0E1013;border-radius:22px;overflow:hidden;box-shadow:var(--shadow-sm);padding:6px 0}
+.ins-card img{width:100%;height:auto}
+
 /* ---------- Specials ---------- */
 .special{background:linear-gradient(160deg,#FBE3D5 0%,#F7D3BF 100%);position:relative;overflow:hidden}
 .special-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,96px);align-items:center}
@@ -324,7 +332,10 @@ section{padding-block:clamp(72px,10vw,128px)}
 .mailbox{display:flex;align-items:center;background:var(--paper);color:var(--ink);border-radius:999px;padding:6px;max-width:100%;width:fit-content;gap:6px}
 .mailbox .mail{padding:0 14px 0 18px;font-weight:700;user-select:all;min-width:0;overflow-wrap:anywhere}
 .mailbox .btn{padding:.95em 1.4em;white-space:nowrap}
-.contact .mailbox .mail{white-space:nowrap;overflow-wrap:normal}
+.contact .mailbox{flex-wrap:wrap;border-radius:28px;width:auto;align-self:stretch;justify-content:space-between}
+.contact .mailbox .mail{white-space:nowrap;overflow-wrap:normal;padding:10px 12px 10px 16px}
+.contact .mailbox .btn{flex:1 1 100%;justify-content:center}
+.contact .mailbox{max-width:440px}
 .contact-links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .chip{display:inline-flex;align-items:center;gap:.55em;border-radius:999px;padding:.6em 1.1em;text-decoration:none;font-weight:700;box-shadow:inset 0 0 0 1.5px var(--espresso);transition:background .25s,color .25s,box-shadow .25s}
 .chip svg{width:18px;height:18px}
@@ -333,7 +344,7 @@ section{padding-block:clamp(72px,10vw,128px)}
 .express{display:inline-flex;align-self:flex-start;gap:.5em;align-items:center}
 .contact-side{position:relative;min-width:0}
 .contact-photo{width:100%;aspect-ratio:3/4;border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
-.contact-photo img{width:100%;height:100%;object-fit:cover}
+.contact-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
 .sig{position:absolute;left:-6%;bottom:6%;font-family:var(--f-script);font-size:clamp(2.6rem,4vw,3.4rem);line-height:1;color:var(--flame);background:var(--paper);padding:.15em .45em .1em;border-radius:14px;transform:rotate(-6deg);box-shadow:var(--shadow-sm)}
 
 footer{padding-block:40px 56px}
@@ -375,6 +386,8 @@ footer{padding-block:40px 56px}
   .brands-box{grid-template-columns:1fr}
   .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
   .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ins-cards,.ins-eng{grid-template-columns:1fr}
+  .more-text{justify-self:start}
   .shots{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 26px;margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter);scrollbar-width:none}
   .shots::-webkit-scrollbar{display:none}
   .shot{flex:0 0 min(72vw,300px);scroll-snap-align:start}
@@ -509,8 +522,8 @@ footer{padding-block:40px 56px}
           <div class="logo"><div class="circ"><img src="img/logo-rtl2.png" alt="RTL ZWEI" loading="lazy"></div></div>
           <div class="logo"><div class="circ"><img src="img/logo-nickel.png" alt="Nickel" loading="lazy"></div></div>
           <div class="logo"><div class="circ"><img src="img/logo-yubo.png" alt="Yubo" loading="lazy"></div></div>
-          <div class="logo more"><div class="circ"><span>&amp; viele<br>mehr</span></div></div>
         </div>
+        <p class="more-text">… und viele mehr</p>
       </div>
     </div>
   </section>
@@ -598,9 +611,16 @@ footer{padding-block:40px 56px}
         <div class="shot rv"><img src="img/shot-8-4mio.jpg" alt="Reel mit 8,4 Mio. Views" loading="lazy"></div>
         <div class="shot rv d1"><img src="img/shot-1-8mio.jpg" alt="Reel mit 1,8 Mio. Views" loading="lazy"></div>
         <div class="shot rv d1"><img src="img/shot-689k.jpg" alt="Reel mit 689 Tsd. Views" loading="lazy"></div>
-        <div class="shot rv d2"><img src="img/shot-325k.jpg" alt="Reel mit 325 Tsd. Views" loading="lazy"></div>
-        <div class="shot rv d2"><img src="img/shot-162k.jpg" alt="Reel mit 162 Tsd. Views" loading="lazy"></div>
-        <div class="shot rv d3"><img src="img/shot-78k.jpg" alt="Reel mit 78,3 Tsd. Views" loading="lazy"></div>
+      </div>
+      <h3 class="ins-label rv">Video-Insights</h3>
+      <div class="ins-cards">
+        <figure class="ins-card rv"><img src="img/ins-a-header.jpg" alt="Video mit 254 Tsd. Aufrufen und 7.111 Likes" loading="lazy"><img src="img/ins-a-overview.jpg" alt="Insights: 254.107 Aufrufe, 155.089 Betrachter, 62 neue Follower" loading="lazy"></figure>
+        <figure class="ins-card rv d1"><img src="img/ins-b-overview.jpg" alt="Insights: 25.243 Aufrufe, 17.736 Betrachter, 7 Sekunden durchschnittliche Wiedergabe" loading="lazy"></figure>
+        <figure class="ins-card rv d2"><img src="img/ins-c-overview.jpg" alt="Insights: 20.175 Aufrufe, 16.824 Betrachter, 35 Sekunden durchschnittliche Wiedergabe, 59 neue Follower" loading="lazy"></figure>
+      </div>
+      <div class="ins-eng">
+        <figure class="ins-card rv"><img src="img/ins-eng-2.jpg" alt="Interaktionen: 116 Tsd. Likes, 516 Kommentare, 961 Reposts, 6,2 Tsd. Speicherungen" loading="lazy"></figure>
+        <figure class="ins-card rv d1"><img src="img/ins-eng-1.jpg" alt="Interaktionen: 2,4 Tsd. Likes, 60 Kommentare, 27 Reposts, 1,5 Tsd. Speicherungen" loading="lazy"></figure>
       </div>
     </div>
   </section>
@@ -654,7 +674,7 @@ footer{padding-block:40px 56px}
           </div>
         </div>
         <div class="contact-side">
-          <div class="contact-photo"><img src="img/cta.jpg" alt="Joanna mit einem bunten Blumenstrauß" loading="lazy"></div>
+          <div class="contact-photo"><img src="img/contact.jpg" alt="Joanna lacht in die Kamera" loading="lazy"></div>
           <p class="sig" aria-hidden="true">– Joanna</p>
         </div>
       </div>
